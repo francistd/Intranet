@@ -1,0 +1,18 @@
+Vistas 
+--------------------------------------------------------------------------------------------------------------------------
+Permisos
+
+SELECT per.id_per, usr.user_name from tbl_permisos as per INNER JOIN tbl_usuarios as usr on per.id_per = usr.id_per WHERE usr.id_usu =1
+--------------------------------------------------------------------------------------------------------------------------
+Empleados
+
+SELECT emp.nombre,emp.apellido,dep.nombre_dep from tbl_departamento as dep INNER JOIN tbl_empleados as emp ON dep.id_dep = emp.id_dep
+--------------------------------------------------------------------------------------------------------------------------
+Vacaciones
+
+SELECT vac.id_emp, emp.nombre,emp.apellido,vac.fecha_fin from tbl_vacaciones as vac INNER JOIN tbl_empleados as emp on vac.id_emp = emp.id_emp
+--------------------------------------------------------------------------------------------------------------------------
+Cartas
+
+SELECT cart.id_carta,emp.nombre,emp.apellido,cart.descripcion,cart.tipo_carta FROM tbl_cartas as cart INNER JOIN tbl_empleados as emp on cart.id_emp = emp.id_emp
+--------------------------------------------------------------------------------------------------------------------------
