@@ -22,7 +22,7 @@
 				<hr>
 				<div class="col-md-12" style="margin-bottom: 4px">
 					<div class="text-center">
-						<button class="btn btn-primary btn-sm text-right"><i class="fas fa-plus"></i> </button>
+						<button class=" agregaDep btn btn-success text-right"><i class="fas fa-plus"></i> </button>
 					</div>
 				</div>
 				<!-- Prueba -->
@@ -35,8 +35,8 @@
 								</div></td>
 								<td><h1><span class="badge badge-secondary"> Tecnología</span></h1></td>
 								<td>
-									<button class="btn btn-success btn-sm" style="margin-bottom: 4px"><i class="fas fa-edit"></i></button>
-									<button class="btn btn-danger btn-sm" style="margin-bottom: 4px"><i class="far fa-trash-alt"></i></button>
+									<button class="Edita btn btn-primary btn-sm" style="margin-bottom: 4px"><i class="fas fa-external-link-alt"></i></button>
+									<button class="Borra btn btn-danger btn-sm" style="margin-bottom: 4px"><i class="far fa-trash-alt"></i></button>
 								</td>
 								
 							</tr>
@@ -46,8 +46,8 @@
 								</div></td>
 								<td><h1><span class="badge badge-secondary"> Administración</span></h1></td>
 								<td>
-									<button class="btn btn-success btn-sm" style="margin-bottom: 4px"><i class="fas fa-edit"></i></button>
-									<button class="btn btn-danger btn-sm" style="margin-bottom: 4px"><i class="fas fa-trash-alt"></i></button>
+									<button class="Edita btn btn-success btn-sm" style="margin-bottom: 4px"><i class="fas fa-edit"></i></button>
+									<button class="Borra btn btn-danger btn-sm" style="margin-bottom: 4px"><i class="far fa-trash-alt"></i></button>
 								</td>
 							</tr>
 							<tr>
@@ -56,8 +56,8 @@
 								</div></td>
 								<td><h1><span class="badge badge-secondary">Capacitación</span></h1></td>
 								<td>
-									<button class="btn btn-success btn-sm" style="margin-bottom: 4px"><i class="fas fa-edit"></i></button>
-									<button class="btn btn-danger btn-sm" style="margin-bottom: 4px"><i class="fas fa-trash-alt"></i></button>
+									<button class="Edita btn btn-success btn-sm" style="margin-bottom: 4px"><i class="fas fa-edit"></i></button>
+									<button class="Borra btn btn-danger btn-sm" style="margin-bottom: 4px"><i class="far fa-trash-alt"></i></button>
 								</td>
 							</tr>
 						</tbody>

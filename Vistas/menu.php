@@ -33,19 +33,19 @@
 					</a>
 
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#"><i class="fas fa-user-tie"></i> Empleado</a>
+						<a class="dropdown-item" href="empleados.php"><i class="fas fa-user-tie"></i> Empleado</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#"><i class="fas fa-phone-square-alt"></i> Directorio</a>
+						<a class="dropdown-item" href="directorio.php"><i class="fas fa-phone-square-alt"></i> Directorio</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="#"><i class="fas fa-birthday-cake"></i> Cumpleaños</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#"><i class="fas fa-road"></i> Solicitud Vacaciones</a>
+						<a class="dropdown-item" href="solicitudVacaciones.php"><i class="fas fa-road"></i> Solicitud Vacaciones</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#"><i class="fas fa-mail-bulk"></i> Solicitud Cartas</a>
+						<a class="dropdown-item" href="solicitudCartas.php"><i class="fas fa-mail-bulk"></i> Solicitud Cartas</a>
 					</div>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link" href="#"><i class="fas fa-palette"></i> Galeria</a>
+					<a class="nav-link" href="galeria.php"><i class="fas fa-palette"></i> Galeria</a>
 				</li>
 				<li class="nav-item dropdown active">
 
@@ -54,9 +54,13 @@
 					</a>
 
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#"><i class="fas fa-cogs"></i> FonTicket</a>
+						<a class="dropdown-item" target="_blank" href="http://10.1.10.91:8080/FonTicket/index.php"><i class="fas fa-cogs"></i> FonTicket</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#"><i class="fas fa-cart-arrow-down"></i> Solicitud de Compras</a>
+						<a class="dropdown-item" href="solicitudCompras.php"><i class="fas fa-cart-arrow-down"></i> Solicitud de Compras</a>
+						<!-- Prueba -->
+						
+
+						<!-- Prueba -->
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="#"><i class="fas fa-chart-line"></i> Reportes</a>
 					</div>
