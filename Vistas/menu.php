@@ -26,6 +26,9 @@
 				<li class="nav-item active">
 					<a class="nav-link" href="documentos.php"><i class="far fa-file-alt"></i> Documentos</a>
 				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="galeria.php"><i class="fas fa-palette"></i> Galeria</a>
+				</li>
 				<li class="nav-item dropdown active">
 
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -38,15 +41,41 @@
 						<a class="dropdown-item" href="directorio.php"><i class="fas fa-phone-square-alt"></i> Directorio</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="#"><i class="fas fa-birthday-cake"></i> Cumpleaños</a>
+						
+						<!-- Submenu Vacaciones -->
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="solicitudVacaciones.php"><i class="fas fa-road"></i> Solicitud Vacaciones</a>
+
+						<div class="dropright">
+							<a href="#" class="dropdown-item dropdown-toggle" data-toggle="dropdown"><i class="fas fa-route"></i> Vacaciones</a>
+
+
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="solicitudVacaciones.php"><i class="fas fa-route"></i> Solicitud Vacaciones</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="administrarVacaciones.php"><i class="fas fa-cog"></i> Administrar Vacaciones</a>
+								
+							</div>
+						</div>
+						<!-- Submenu Vacaciones-->
+
+						<!-- Submenu Cartas -->
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="solicitudCartas.php"><i class="fas fa-mail-bulk"></i> Solicitud Cartas</a>
+
+						<div class="dropright">
+							<a href="#" class="dropdown-item dropdown-toggle" data-toggle="dropdown"><i class="far fa-envelope"></i> Cartas</a>
+
+
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="solicitudCartas.php"><i class="far fa-envelope"></i> Solicitud Cartas</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="administrarCartas.php"><i class="fas fa-cog"></i> Administrar Cartas</a>
+								
+							</div>
+						</div>
+						<!-- Submenu Cartas -->
 					</div>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="galeria.php"><i class="fas fa-palette"></i> Galeria</a>
-				</li>
+			
 				<li class="nav-item dropdown active">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<i class="fas fa-users"></i> Usuarios
@@ -69,7 +98,7 @@
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" target="_blank" href="http://10.1.10.91:8080/FonTicket/index.php"><i class="fas fa-cogs"></i> FonTicket</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#"><i class="fas fa-chart-line"></i> Reportes</a>
+						<a class="dropdown-item" href="reportes.php"><i class="fas fa-chart-line"></i> Reportes</a>
 
 						<!-- Submenu -->
 						<div class="dropdown-divider"></div>
@@ -81,7 +110,7 @@
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<a class=" dropdown-item" href="solicitudCompras.php"><i class="fas fa-cart-arrow-down"></i> Solicitud de Compras</a>
 								<div class="dropdown-divider"></div>
-								<a class=" dropdown-item"  href="verOrdenes.php"><i class="fas fa-eye"></i> Ver Ordenes</a>
+								<a class=" dropdown-item"  href="administrarOrdenes.php"><i class="fas fa-cog"></i> Administrar Ordenes</a>
 							</div>
 						</div>
 						<!-- Submenu -->

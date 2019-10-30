@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Empleados</title>
+	<title>Administrar Ordenes</title>
 	<?php require_once "dependencias.php"; ?>
 </head>
 <body style="background-color: #000046">
@@ -10,7 +10,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 rounded alert-secondary " style="background-color: #ECF0F1; margin-bottom: 30px" >
-				<h1 class="text-center">Ver Ordenes <i class="fas fa-shopping-bag"></i></h1>
+				<h1 class="text-center">Administrar Ordenes <i class="fas fa-cog"></i></h1>
 				<!-- Prueba -->
 				<div class="col-md-12 mx-auto" style="margin-bottom: 4px">
 					<div class="text-center">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Solicitud de Compras</title>
+	<title>Administrar Cartas</title>
 	<?php require_once "dependencias.php"; ?>
 </head>
 <body style="background-color: #000046">
@@ -10,22 +10,12 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 rounded alert-secondary " style="background-color: #ECF0F1; margin-bottom: 30px" >
-				<h1 class="text-center">Solicitud de Compras <i class="fas fa-cart-arrow-down"></i></h1>
+				<h1 class="text-center">Administrar Cartas <i class="fas fa-mail-bulk"></i></h1>
 				<!-- Prueba -->
 				<div class="col-md-12 mx-auto" style="margin-bottom: 4px">
 					<div class="text-center">
 						<strong><i class="fas fa-search"></i></strong>
 						<label class="text-center">Búsqueda<input type="text" id="buscarVT" name="buscarVT" class="form-control form-control-sm"></label>
-
-						<strong><i class="fas fa-filter"></i></strong>
-						<label>Departamento<select id="estado" name="estado" class=" form-control form-control-sm ">
-							<option value="">-Seleccione-</option>
-							<option>Dirección</option>
-							<option>Contabilidad y Administración</option>
-							<option>Creditos y Cobros</option>
-							<option>Tecnología</option>
-							<option>Capacitación</option>
-						</select></label>
 
 						<label><button class="buscar_emp btn btn-secondary btn-sm "><i class="fas fa-search"></i> Buscar</button></label>
 					</div>
@@ -43,31 +33,30 @@
 						<thead>
 							<tr>
 								<th scope="col">#</th>
-								<th scope="col">Solicitante</th>
+								<th scope="col">Nombre</th>
+								<th scope="col">Apellido</th>
 								<th scope="col">Departamento</th>
-								<th scope="col">Descripción</th>
-								<th scope="col">Total</th>
-								<th scope="col">Autorizado Por:</th>
+								<th scope="col">Fecha Creación</th>
+								<th scope="col">Creador</th>
 								<th scope="col">Estado</th>
 								<th scope="col">Acción</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-
 								<td><span class="badge badge-secondary"> 1</span>
 								</td>
-								<td><span class="badge badge-secondary"> Juan Tavarez</span>
+								<td><span class="badge badge-secondary"> Juan Francisco</span>
+								</td>
+								<td><span class="badge badge-secondary"> Tavarez Diaz</span>
 								</td>
 								<td><span class="badge badge-secondary"> Tecnologia</span>
 								</td>
-								<td><span class="badge badge-secondary"> compra de Portatil Dell Vostro</span>
+								<td><span class="badge badge-secondary"> 20-10-2019</span>
 								</td>
-								<td><span class="badge badge-secondary"> 23,000 RD$</span>
+								<td><span class="badge badge-secondary"> tavarezju</span>
 								</td>
-								<td><span class="badge badge-secondary"> Yasaili Martinez</span>
-								</td>
-								<td><span class="badge badge-secondary"> Espera</span>
+								<td><span class="badge badge-secondary"> Enviada</span>
 								</td>
 
 								<td>
@@ -77,21 +66,19 @@
 
 							</tr>
 							<tr>
-								
-
 								<td><span class="badge badge-secondary"> 2</span>
 								</td>
-								<td><span class="badge badge-secondary"> Enmanuel Mancebo</span>
+								<td><span class="badge badge-secondary"> Jose Enmanuel</span>
+								</td>
+								<td><span class="badge badge-secondary"> Mancebo Cruz</span>
 								</td>
 								<td><span class="badge badge-secondary"> Tecnologia</span>
 								</td>
-								<td><span class="badge badge-secondary"> Compra de Regleta</span>
+								<td><span class="badge badge-secondary"> 29-10-2019</span>
 								</td>
-								<td><span class="badge badge-secondary"> 400 RD$</span>
+								<td><span class="badge badge-secondary"> manceboj</span>
 								</td>
-								<td><span class="badge badge-secondary"> Yasaili Martinez</span>
-								</td>
-								<td><span class="badge badge-secondary"> Aprobada</span>
+								<td><span class="badge badge-secondary"> Recibida</span>
 								</td>
 
 								<td>
@@ -100,22 +87,21 @@
 								</td>
 							</tr>
 							<tr>
-								
-
-								<td><span class="badge badge-secondary"> 3</span>
+								<td><span class="badge badge-secondary"> 12</span>
 								</td>
-								<td><span class="badge badge-secondary"> Juan Tavarez</span>
+								<td><span class="badge badge-secondary"> Juan Francisco</span>
+								</td>
+								<td><span class="badge badge-secondary"> Tavarez Diaz</span>
 								</td>
 								<td><span class="badge badge-secondary"> Tecnologia</span>
 								</td>
-								<td><span class="badge badge-secondary"> compra de Portatil Dell Vostro</span>
+								<td><span class="badge badge-secondary"> 15-10-2019</span>
 								</td>
-								<td><span class="badge badge-secondary"> 23,000 RD$</span>
+								<td><span class="badge badge-secondary"> tavarezju</span>
 								</td>
-								<td><span class="badge badge-secondary"> Yasaili Martinez</span>
+								<td><span class="badge badge-secondary"> Creada</span>
 								</td>
-								<td><span class="badge badge-secondary"> Rechazada</span>
-								</td>
+
 
 								<td>
 									<button class="Edita btn btn-primary btn-sm" style="margin-bottom: 4px"><i class="fas fa-external-link-alt"></i></button>
@@ -130,6 +116,9 @@
 			</div>
 		</div>
 	</div>
-
+<!-- Pie -->
+<?php require_once "pie.php" ?>
+<!-- Pie -->
 </body>
 </html>
+

@@ -10,7 +10,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 rounded alert-secondary " style="background-color: #ECF0F1; margin-bottom: 30px" >
-				<h1 class="text-center">Solicitud Vacaciones <i class="fas fa-road"></i></h1>
+				<h1 class="text-center">Solicitud Vacaciones <i class="fas fa-route"></i></h1>
 				<!-- Prueba -->
 				<div class="col-md-12 mx-auto" style="margin-bottom: 4px">
 					<div class="text-center">
