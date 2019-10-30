@@ -13,7 +13,7 @@
 		</button>
 
 		<div class=" collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
+			<ul class="navbar-nav mr-auto ">
 				<li class="nav-item active">
 					<a class="nav-link" href="#"><i class="fas fa-university"></i> Institucion <span class="sr-only">(current)</span></a>
 				</li>
@@ -48,25 +48,6 @@
 					<a class="nav-link" href="galeria.php"><i class="fas fa-palette"></i> Galeria</a>
 				</li>
 				<li class="nav-item dropdown active">
-
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<i class="fas fa-tools"></i> Herramientas
-					</a>
-
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" target="_blank" href="http://10.1.10.91:8080/FonTicket/index.php"><i class="fas fa-cogs"></i> FonTicket</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="solicitudCompras.php"><i class="fas fa-cart-arrow-down"></i> Solicitud de Compras</a>
-						<!-- Prueba -->
-						
-
-						<!-- Prueba -->
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#"><i class="fas fa-chart-line"></i> Reportes</a>
-					</div>
-				</li>
-
-				<li class="nav-item dropdown active">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<i class="fas fa-users"></i> Usuarios
 					</a>
@@ -78,6 +59,36 @@
 						<a class="dropdown-item" href="#"><i class="fas fa-key"></i> Cambiar Contraseña</a>
 					</div>
 				</li>
+
+				<li class="nav-item dropdown active">
+
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="fas fa-tools"></i> Herramientas
+					</a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" target="_blank" href="http://10.1.10.91:8080/FonTicket/index.php"><i class="fas fa-cogs"></i> FonTicket</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#"><i class="fas fa-chart-line"></i> Reportes</a>
+
+						<!-- Submenu -->
+						<div class="dropdown-divider"></div>
+
+						<div class="dropright">
+							<a href="#" class="dropdown-item dropdown-toggle" data-toggle="dropdown"><i class="fas fa-shopping-bag"></i> Orden de Compras</a>
+
+
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class=" dropdown-item" href="solicitudCompras.php"><i class="fas fa-cart-arrow-down"></i> Solicitud de Compras</a>
+								<div class="dropdown-divider"></div>
+								<a class=" dropdown-item"  href="verOrdenes.php"><i class="fas fa-eye"></i> Ver Ordenes</a>
+							</div>
+						</div>
+						<!-- Submenu -->
+
+					</div>
+				</li>
+				
 				
 			</ul>
 
@@ -104,8 +115,6 @@
 
 		</div>
 	</nav>
-
-
 
 
 </body>
