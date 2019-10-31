@@ -151,6 +151,8 @@
 			</div>
 		</div>
 	</div>
-
+<!-- Pie -->
+<?php require_once "pie.php" ?>
+<!-- Pie -->
 </body>
 </html>

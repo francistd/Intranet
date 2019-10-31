@@ -25,48 +25,39 @@
 						<button class=" agregaDep btn btn-success text-right"><i class="fas fa-plus"></i> </button>
 					</div>
 				</div>
-				<!-- Prueba -->
-				<div class="rounded alert-light">
-					<table class="table table-sm">
-						<tbody>
-							<tr>
-								<td><div class="float-left">
-									<img src="../Imagenes/IT.jpg" width="250" height="200" alt="..." class="img-thumbnail">
-								</div></td>
-								<td><h1><span class="badge badge-secondary"> Tecnología</span></h1></td>
-								<td>
-									<button class="Edita btn btn-primary btn-sm" style="margin-bottom: 4px"><i class="fas fa-external-link-alt"></i></button>
-									<button class="Borra btn btn-danger btn-sm" style="margin-bottom: 4px"><i class="far fa-trash-alt"></i></button>
-								</td>
-								
-							</tr>
-							<tr>
-								<td><div class="float-left">
-									<img src="../Imagenes/Adm.jpg" width="250" height="200" alt="..." class="img-thumbnail">
-								</div></td>
-								<td><h1><span class="badge badge-secondary"> Administración</span></h1></td>
-								<td>
-									<button class="Edita btn btn-success btn-sm" style="margin-bottom: 4px"><i class="fas fa-edit"></i></button>
-									<button class="Borra btn btn-danger btn-sm" style="margin-bottom: 4px"><i class="far fa-trash-alt"></i></button>
-								</td>
-							</tr>
-							<tr>
-								<td><div class="float-left">
-									<img src="../Imagenes/cap.png" width="250" height="200" alt="..." class="img-thumbnail">
-								</div></td>
-								<td><h1><span class="badge badge-secondary">Capacitación</span></h1></td>
-								<td>
-									<button class="Edita btn btn-success btn-sm" style="margin-bottom: 4px"><i class="fas fa-edit"></i></button>
-									<button class="Borra btn btn-danger btn-sm" style="margin-bottom: 4px"><i class="far fa-trash-alt"></i></button>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+				<!-- PruebaF -->
+				<div class="col-md-12" style="margin-bottom: 4px">
+					<div class="text-center ">
+						<figure class="figure ">
+							<img src="../Imagenes/Direccion.jpg" class=" shrink figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." height="160" width="160">
+							<figcaption class="figure-caption text-center"><strong><span class="badge badge-pill badge-dark">Dirección</span></strong></figcaption>
+						</figure>
+						<figure class="figure ">
+							<img src="../Imagenes/Contabilidad.jpg" class=" shrink figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." height="160" width="160">
+							<figcaption class="figure-caption text-center"><strong><span class="badge badge-pill badge-dark">Contabilidad y Admin.</span></strong></figcaption>
+						</figure>
+						<figure class="figure">
+							<img src="../Imagenes/Creditos.jpg" class="shrink figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." height="160" width="160">
+							<figcaption class="figure-caption text-center"><strong><span class="badge badge-pill badge-dark">Creditos y Cobros</span></strong></figcaption>
+						</figure>
+						<figure class="figure">
+							<img src="../Imagenes/Tecnologia.jpg" class="shrink figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." height="160" width="160">
+							<figcaption class="figure-caption text-center"><strong><span class="badge badge-pill badge-dark">Tecnología</span></strong></figcaption>
+						</figure>
+						<figure class="figure">
+							<img src="../Imagenes/Capacitacion.jpg" class="shrink figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." height="160" width="160">
+							<figcaption class="figure-caption text-center"><strong><span class="badge badge-pill badge-dark">Capacitación</span></strong></figcaption>
+						</figure>
+
+					</div>
+					<hr>
 				</div>
-				<!-- Prueba -->
+				<!-- PruebaF -->
 			</div>
 		</div>
 	</div>
-
+<!-- Pie -->
+<?php require_once "pie.php" ?>
+<!-- Pie -->
 </body>
 </html>

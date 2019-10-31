@@ -15,19 +15,13 @@
 		<div class=" collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto ">
 				<li class="nav-item active">
-					<a class="nav-link" href="#"><i class="fas fa-university"></i> Institucion <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="eventos.php"><i class="far fa-calendar-alt"></i> Eventos <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item active">
 					<a class="nav-link" href="noticias.php"><i class="far fa-newspaper"></i> Noticias <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item active">
 					<a class="nav-link" href="departamentos.php"><i class="far fa-building"></i> Departamentos</a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="documentos.php"><i class="far fa-file-alt"></i> Documentos</a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="galeria.php"><i class="fas fa-palette"></i> Galeria</a>
 				</li>
 				<li class="nav-item dropdown active">
 
@@ -39,8 +33,6 @@
 						<a class="dropdown-item" href="empleados.php"><i class="fas fa-user-tie"></i> Empleado</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="directorio.php"><i class="fas fa-phone-square-alt"></i> Directorio</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#"><i class="fas fa-birthday-cake"></i> Cumpleaños</a>
 						
 						<!-- Submenu Vacaciones -->
 						<div class="dropdown-divider"></div>
@@ -75,20 +67,34 @@
 						<!-- Submenu Cartas -->
 					</div>
 				</li>
-			
 				<li class="nav-item dropdown active">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<i class="fas fa-users"></i> Usuarios
 					</a>
 					<div class=" dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#"><i class="fas fa-user-plus"></i> Crear Usuario</a>
+						<a class="dropdown-item" href="crearUsuario.php"><i class="fas fa-user-plus"></i> Crear Usuario</a>
+						<!-- Prueb -->
+						<!-- Submenu Permisos Usuario -->
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#"><i class="fas fa-user-shield"></i> Permisos de Usuario</a>
+
+						<div class="dropright">
+							<a href="#" class="dropdown-item dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user-shield"></i> Permisos de Usuario</a>
+
+
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="menuUsuario.php"><i class="fas fa-chevron-circle-down"></i> Menú Usuario</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#"><i class="fas fa-chevron-circle-down"></i> Sub-Menú</a>
+								
+							</div>
+						</div>
+						<!-- Submenu Vacaciones-->
+						<!-- Prueb -->
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="#"><i class="fas fa-key"></i> Cambiar Contraseña</a>
 					</div>
 				</li>
-
+				
 				<li class="nav-item dropdown active">
 
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -118,6 +124,14 @@
 					</div>
 				</li>
 				
+			
+				
+				<li class="nav-item active">
+					<a class="nav-link" href="documentos.php"><i class="far fa-file-alt"></i> Documentos</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="galeria.php"><i class="fas fa-palette"></i> Galeria</a>
+				</li>
 				
 			</ul>
 
