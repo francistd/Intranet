@@ -73,23 +73,8 @@
 					</a>
 					<div class=" dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="crearUsuario.php"><i class="fas fa-user-plus"></i> Crear Usuario</a>
-						<!-- Prueb -->
-						<!-- Submenu Permisos Usuario -->
 						<div class="dropdown-divider"></div>
-
-						<div class="dropright">
-							<a href="#" class="dropdown-item dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user-shield"></i> Permisos de Usuario</a>
-
-
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="menuUsuario.php"><i class="fas fa-chevron-circle-down"></i> Menú Usuario</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#"><i class="fas fa-chevron-circle-down"></i> Sub-Menú</a>
-								
-							</div>
-						</div>
-						<!-- Submenu Vacaciones-->
-						<!-- Prueb -->
+						<a class="dropdown-item" href="permisoUsuario.php"><i class="fas fa-user-shield"></i> Permisos de Usuario</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="#"><i class="fas fa-key"></i> Cambiar Contraseña</a>
 					</div>

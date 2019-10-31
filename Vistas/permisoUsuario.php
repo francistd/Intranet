@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Menú Usuario</title>
+	<title>Permisos de Usuario</title>
 	<?php require_once "dependencias.php"; ?>
 </head>
 <body style="background-color: #000046">
@@ -10,7 +10,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 rounded alert-secondary " style="background-color: #ECF0F1; margin-bottom: 30px" >
-				<h1 class="text-center">Menú Usuario <i class="fas fa-chevron-circle-down"></i></h1>
+				<h1 class="text-center">Permisos de Usuario <i class="fas fa-user-shield"></i></h1>
 				<!-- Prueba -->
 				<div class="col-md-12 mx-auto" style="margin-bottom: 4px">
 					<div class="text-center">
