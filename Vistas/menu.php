@@ -7,7 +7,8 @@
 <body style="background-color: #000046">
 	
 	<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-info">
-		<a class="navbar-brand" href="inicio.php">Intranet</a>
+		
+		<a class="navbar-brand" href="inicio.php"><img src="../Imagenes/colibri.png" width="45" height="45"> Intranet</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -76,7 +77,7 @@
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="permisoUsuario.php"><i class="fas fa-user-shield"></i> Permisos de Usuario</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#"><i class="fas fa-key"></i> Cambiar Contraseña</a>
+						<a class="dropdown-item" href="cambiarContraseña.php"><i class="fas fa-key"></i> Cambiar Contraseña</a>
 					</div>
 				</li>
 				
@@ -126,7 +127,7 @@
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Juan Tavarez
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#"><i class="far fa-id-card"></i> Perfil</a>
+						<a class="dropdown-item" href="perfil.php"><i class="far fa-id-card"></i> Perfil</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="#"><i class="fas fa-key"></i> Contraseña</a>
 						<div class="dropdown-divider"></div>

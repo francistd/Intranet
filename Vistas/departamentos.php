@@ -29,24 +29,24 @@
 				<div class="col-md-12" style="margin-bottom: 4px">
 					<div class="text-center ">
 						<figure class="figure ">
-							<img src="../Imagenes/Direccion.jpg" class=" shrink figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." height="160" width="160">
-							<figcaption class="figure-caption text-center"><strong><span class="badge badge-pill badge-dark">Dirección</span></strong></figcaption>
+							<img src="../Imagenes/direccion.png" class=" shrink figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." height="160" width="160">
+							<figcaption class="figure-caption text-center"><h5><strong><span class="badge badge-pill badge-dark">Dirección</span></strong></h5></figcaption>
 						</figure>
 						<figure class="figure ">
-							<img src="../Imagenes/Contabilidad.jpg" class=" shrink figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." height="160" width="160">
-							<figcaption class="figure-caption text-center"><strong><span class="badge badge-pill badge-dark">Contabilidad y Admin.</span></strong></figcaption>
+							<img src="../Imagenes/contabilidad.png" class=" shrink figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." height="160" width="160">
+							<figcaption class="figure-caption text-center"><h5><strong><span class="badge badge-pill badge-dark">Contabilidad y Admin.</span></strong></h5></figcaption>
 						</figure>
 						<figure class="figure">
-							<img src="../Imagenes/Creditos.jpg" class="shrink figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." height="160" width="160">
-							<figcaption class="figure-caption text-center"><strong><span class="badge badge-pill badge-dark">Creditos y Cobros</span></strong></figcaption>
+							<img src="../Imagenes/cobros.png" class="shrink figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." height="160" width="160">
+							<figcaption class="figure-caption text-center"><h5><strong><span class="badge badge-pill badge-dark">Creditos y Cobros</span></strong></h5></figcaption>
 						</figure>
 						<figure class="figure">
-							<img src="../Imagenes/Tecnologia.jpg" class="shrink figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." height="160" width="160">
-							<figcaption class="figure-caption text-center"><strong><span class="badge badge-pill badge-dark">Tecnología</span></strong></figcaption>
+							<img src="../Imagenes/tecnologia.png" class="shrink figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." height="160" width="160">
+							<figcaption class="figure-caption text-center"><h5><strong><span class="badge badge-pill badge-dark">Tecnología</span></strong></h5></figcaption>
 						</figure>
 						<figure class="figure">
-							<img src="../Imagenes/Capacitacion.jpg" class="shrink figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." height="160" width="160">
-							<figcaption class="figure-caption text-center"><strong><span class="badge badge-pill badge-dark">Capacitación</span></strong></figcaption>
+							<img src="../Imagenes/capacitacion.png" class="shrink figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." height="160" width="160">
+							<figcaption class="figure-caption text-center"><strong><h5><span class="badge badge-pill badge-dark">Capacitación</span></strong></h5></figcaption>
 						</figure>
 
 					</div>

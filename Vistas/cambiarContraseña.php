@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Permisos de Usuario</title>
+	<title>Cambiar Contraseña</title>
 	<?php require_once "dependencias.php"; ?>
 </head>
 <body style="background-color: #000046">
@@ -10,7 +10,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 rounded alert-secondary " style="background-color: #ECF0F1; margin-bottom: 30px" >
-				<h1 class="text-center">Permisos de Usuario <i class="fas fa-user-shield"></i></h1>
+				<h1 class="text-center">Cambiar Contraseña <i class="fas fa-key"></i></h1>
 				<!-- Prueba -->
 				<div class="col-md-12 mx-auto" style="margin-bottom: 4px">
 					<div class="text-center">
@@ -29,6 +29,7 @@
 								<th scope="col">Nombre</th>
 								<th scope="col">Apellido</th>
 								<th scope="col">Usuario</th>
+								<th scope="col">Contraseña</th>
 								<th scope="col">Modificado Por:</th>
 								<th scope="col">Ultima Modificación</th>
 								<th scope="col">Hora Modificación</th>
@@ -42,6 +43,8 @@
 								<td><span class="badge badge-secondary"> Tavarez Diaz</span>
 								</td>
 								<td><span class="badge badge-secondary"> tavarezju</span>
+								</td>
+								<td><span class="badge badge-secondary"> 256ce461e1dc9cf</span>
 								</td>
 								<td><span class="badge badge-secondary"> tavarezju</span>
 								</td>
@@ -64,6 +67,8 @@
 								</td>
 								<td><span class="badge badge-secondary"> manceboj</span>
 								</td>
+								<td><span class="badge badge-secondary"> 256ce461e1dc9cf</span>
+								</td>
 								<td><span class="badge badge-secondary"> tavarezju</span>
 								</td>
 								<td><span class="badge badge-secondary"> 31-10-2019</span>
@@ -84,6 +89,8 @@
 								<td><span class="badge badge-secondary"> Tavarez Diaz</span>
 								</td>
 								<td><span class="badge badge-secondary"> tavarezju</span>
+								</td>
+								<td><span class="badge badge-secondary"> 256ce461e1dc9cf</span>
 								</td>
 								<td><span class="badge badge-secondary"> tavarezju</span>
 								</td>
