@@ -129,7 +129,7 @@
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="perfil.php"><i class="far fa-id-card"></i> Perfil</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#"><i class="fas fa-key"></i> Contraseña</a>
+						<a class="dropdown-item" href="contraseña.php"><i class="fas fa-key"></i> Contraseña</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Salir</a>
 						
