@@ -24,7 +24,7 @@
 									<strong><i class="far fa-calendar-alt"></i> </strong>
 									<label> Hasta<input type = "date"  id="fecha_finalVT" name="fecha_finalVT"  class="form-control form-control-sm"></label>
 
-								<label><button class="btn btn-secondary btn-sm "><i class="fas fa-search"></i> Buscar</button></label>
+								<label><button class=" buscarNoti btn btn-secondary btn-sm "><i class="fas fa-search"></i> Buscar</button></label>
 								</div>
 					</div>
 				</div>
@@ -32,7 +32,7 @@
 				<hr>
 				<div class="col-md-12" style="margin-bottom: 4px">
 					<div class="text-center">
-						<button class="btn btn-primary btn-sm text-right"><i class="fas fa-plus"></i></button>
+						<button class="agregaNoti btn btn-success text-right"><i class="fas fa-plus"></i></button>
 					</div>
 				</div>
 				<div class="col-md-8 mx-auto" style="margin-bottom: 50px">
@@ -40,8 +40,8 @@
 						<div class="card-header">
 							<span class="badge badge-pill badge-dark"><i class="fas fa-newspaper"></i> <strong>Generada el</strong> 23-10-2019 | 8:59 AM</span>
 							<div class="float-right">
-								<button class="btn btn-success btn-sm" style="margin-bottom: 4px"><i class="fas fa-edit"></i></button>
-								<button class="btn btn-danger btn-sm" style="margin-bottom: 4px"><i class="fas fa-trash-alt"></i></button>
+								<button class="editaNoti btn btn-success btn-sm" style="margin-bottom: 4px"><i class="fas fa-edit"></i></button>
+								<button class="borrarNoti btn btn-danger btn-sm" style="margin-bottom: 4px"><i class="fas fa-trash-alt"></i></button>
 							</div>
 							
 						</div>
@@ -59,8 +59,8 @@
 						<div class="card-header">
 							<span class="badge badge-pill badge-dark"><i class="fas fa-newspaper"></i> <strong>Generada el</strong> 23-10-2019 | 9:10 AM</span>
 							<div class="float-right">
-								<button class="btn btn-success btn-sm" style="margin-bottom: 4px"><i class="fas fa-edit"></i></button>
-								<button class="btn btn-danger btn-sm" style="margin-bottom: 4px"><i class="fas fa-trash-alt"></i></button>
+								<button class="editaNoti btn btn-success btn-sm" style="margin-bottom: 4px"><i class="fas fa-edit"></i></button>
+								<button class="borrarNoti btn btn-danger btn-sm" style="margin-bottom: 4px"><i class="fas fa-trash-alt"></i></button>
 							</div>
 						</div>
 						<img src="../Imagenes/fondesa.jpg" class="img-thumbnail card-img-top" alt="...">

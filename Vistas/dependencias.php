@@ -5,6 +5,7 @@
 <link rel="stylesheet" type="text/css" href="../CSS/empleados.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../CSS/departamentos.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../CSS/galeria.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../CSS/noticias.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../Librerias/bootstrap-4.3.1/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../Librerias/fontawesome-free/css/all.min.css">
 
