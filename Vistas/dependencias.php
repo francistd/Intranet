@@ -13,12 +13,13 @@
 
 <!-- load jQuery 3.3.1 -->
 <script src="../Librerias/jquery-3.3.1.min.js"></script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	var jQuery_3_3_1 = $.noConflict(true);
-</script>
+</script> -->
 
 <script src="../Librerias/bootstrap-4.3.1/js/bootstrap.bundle.js"></script>
 <script src="../Librerias/bootstrap-4.3.1/js/bootstrap.bundle.min.js"></script>
 <script src="../Librerias/bootstrap-4.3.1/js/bootstrap.js"></script>
 <script src="../Librerias/sweetalert.min.js"></script>
 <script src="../JS/menu.js"></script>
+<script src="../JS/noticias.js"></script>
