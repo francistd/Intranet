@@ -23,3 +23,5 @@
 <script src="../Librerias/sweetalert.min.js"></script>
 <script src="../JS/menu.js"></script>
 <script src="../JS/noticias.js"></script>
+<script src="../JS/departamento.js"></script>
+<script src="../JS/empleado.js"></script>

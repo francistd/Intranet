@@ -34,7 +34,7 @@
 				<hr>
 				<div class="col-md-12" style="margin-bottom: 4px">
 					<div class="text-center">
-						<button class=" agregaEmp btn btn-success text-right"><i class="fas fa-plus"></i> </button>
+						<button class=" agregaEmp btn btn-success text-right" data-toggle="modal" data-target="#AgregaEmpleado"><i class="fas fa-plus"></i> </button>
 					</div>
 				</div>
 				<!-- Prueba -->
@@ -151,6 +151,7 @@
 			</div>
 		</div>
 	</div>
+	<?php include "Modal/modalEmpleado.php" ?>
 <!-- Pie -->
 <?php require_once "pie.php" ?>
 <!-- Pie -->
