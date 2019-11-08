@@ -45,7 +45,7 @@
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fas fa-window-close"></i> <strong>Cerrar</strong></button>
-				<button type="button" class="btn btn-primary btn-sm"><i class="far fa-save"></i> <strong>Guardar</strong></button>
+				<button type="button" class="btn btn-warning btn-sm"><i class="far fa-save"></i> <strong>Guardar</strong></button>
 			</div>
 		</div>
 	</div>
@@ -57,7 +57,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plus"></i> Editar Departamento</h5>
+				<h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-pencil-alt"></i> Editar Departamento</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -99,7 +99,7 @@
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fas fa-window-close"></i> <strong>Cerrar</strong></button>
-				<button type="button" class="btn btn-primary btn-sm"><i class="far fa-save"></i> <strong>Guardar</strong></button>
+				<button type="button" class="btn btn-warning btn-sm"><i class="far fa-save"></i> <strong>Guardar</strong></button>
 			</div>
 		</div>
 	</div>

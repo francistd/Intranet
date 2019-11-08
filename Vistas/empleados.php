@@ -80,7 +80,7 @@
 								</td>
 
 								<td>
-									<button class="Edita btn btn-primary btn-sm" style="margin-bottom: 4px"><i class="fas fa-external-link-alt"></i></button>
+									<button class="Edita btn btn-primary btn-sm" data-toggle="modal" data-target="#EditarEmpleado" style="margin-bottom: 4px"><i class="fas fa-external-link-alt"></i></button>
 									<button class="Borra btn btn-danger btn-sm" style="margin-bottom: 4px"><i class="far fa-trash-alt"></i></button>
 								</td>
 
