@@ -24,7 +24,7 @@
 				<hr>
 				<div class="col-md-12" style="margin-bottom: 4px">
 					<div class="text-center">
-						<button class=" agregaEmp btn btn-success text-right"><i class="fas fa-plus"></i> </button>
+						<button class=" agregaEmp btn btn-success text-right" data-toggle="modal" data-target="#AgregaVacaciones"><i class="fas fa-plus"></i> </button>
 					</div>
 				</div>
 				<!-- Prueba -->
@@ -60,7 +60,7 @@
 								</td>
 
 								<td>
-									<button class="Edita btn btn-primary btn-sm" style="margin-bottom: 4px"><i class="fas fa-external-link-alt"></i></button>
+									<button class="Edita btn btn-primary btn-sm" data-toggle="modal" data-target="#EditarDirectorio" style="margin-bottom: 4px"><i class="fas fa-external-link-alt"></i></button>
 									<button class="Borra btn btn-danger btn-sm" style="margin-bottom: 4px"><i class="far fa-trash-alt"></i></button>
 								</td>
 
@@ -116,6 +116,7 @@
 			</div>
 		</div>
 	</div>
+	<?php include "Modal/modalVacaciones.php" ?>
 <!-- Pie -->
 <?php require_once "pie.php" ?>
 <!-- Pie -->

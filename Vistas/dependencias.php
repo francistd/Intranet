@@ -13,6 +13,7 @@
 
 <!-- load jQuery 3.3.1 -->
 <script src="../Librerias/jquery-3.3.1.min.js"></script>
+<script src="../Librerias/moment.min.js"></script>
 <!-- <script type="text/javascript">
 	var jQuery_3_3_1 = $.noConflict(true);
 </script> -->
@@ -25,3 +26,4 @@
 <script src="../JS/noticias.js"></script>
 <script src="../JS/departamento.js"></script>
 <script src="../JS/empleado.js"></script>
+<script src="../JS/vacaciones.js"></script>
