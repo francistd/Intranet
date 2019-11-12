@@ -27,3 +27,4 @@
 <script src="../JS/departamento.js"></script>
 <script src="../JS/empleado.js"></script>
 <script src="../JS/vacaciones.js"></script>
+<script src="../JS/administrarVacaciones.js"></script>

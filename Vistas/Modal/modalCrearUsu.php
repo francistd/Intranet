@@ -1,9 +1,9 @@
-<!--Modal Agregar Vacaciones -->
-<div class="modal fade" id="AgregaVacaciones" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--Modal Agregar Usuario -->
+<div class="modal fade" id="AgregaUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog " role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plus"></i> Agregar Vacaciones</h5>
+				<h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plus"></i> Agregar Usuario</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -12,23 +12,37 @@
 				<form>
 					<div class="col">
 						<div class="col-sm-10 mx-auto">
-							<label><strong>Comentario:</strong></label>
-							<textarea class="form-control form-control-sm" placeholder="Comentario"></textarea>
+							<label><strong>Nombre:</strong></label>
+							<input type="text" class="form-control form-control-sm" placeholder="Nombre">
 						</div>
 
 						<div class="col-sm-10 mx-auto">
-							<label><strong>Fecha Inicial:</strong></label>
-							<input type="date" id="Inicial" class="form-control form-control-sm" placeholder="Fecha Inicial">
+							<label><strong>Departamento:</strong></label>
+							<input type="text" class="form-control form-control-sm" placeholder="Departamento">
 						</div>
 
 						<div class="col-sm-10 mx-auto">
-							<label><strong>Fecha Final:</strong></label>
-							<input type="date" id="Final"  class="form-control form-control-sm" placeholder="Fecha Final">
+							<label><strong>Nombre Usuario:</strong></label> <span><i class="fas fa-check-circle"></i></span> <span><i class="fas fa-times-circle"></i></span>
+							<input type="text" class="form-control form-control-sm" placeholder="Nombre Usuario">
 						</div>
 
 						<div class="col-sm-10 mx-auto">
-							<label><strong>Dias Laborables</strong></label>
-							<input type="text" readonly id="dias" class="form-control form-control-sm" placeholder="Total Dias">
+							<label><strong>Contraseña:</strong></label>
+							<input type="password" class="form-control form-control-sm" placeholder="Contraseña">
+						</div>
+
+						<div class="col-sm-10 mx-auto">
+							<label><strong>Confirmar Contraseña:</strong></label>
+							<input type="password" class="form-control form-control-sm" placeholder="Confirmar Contraseña">
+						</div>
+						
+						<div class="col-sm-10 mx-auto">
+							<label><strong>Tipo Usuario:</strong></label>
+							<select class="form-control form-control-sm" id="exampleFormControlSelect1">
+								<option selected>-Seleccione-</option>
+								<option>Administrador</option>
+								<option>Regular</option>
+							</select>
 						</div>
 
 					</div>
@@ -45,14 +59,15 @@
 		</div>
 	</div>
 </div>
-<!-- Modal Agregar Vacaciones -->
+<!-- Modal Agregar Usuario -->
 
-<!-- Modal Editar Vacaciones -->
-<div class="modal fade" id="EditarVacaciones" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<!-- Modal Editar Usuario -->
+<div class="modal fade" id="EditarUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-xl" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-pencil-alt"></i> Editar Vacaciones</h5>
+				<h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-pencil-alt"></i> Editar Usuario</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -60,12 +75,9 @@
 			<div class="modal-body">
 				<form>
 					<form>
+
 						<div class="row">
 							<div class="col">
-								<div class="col-sm-10 mx-auto">
-									<label><strong># Indentificador:</strong></label>
-									<input type="text" disabled class="form-control form-control-sm" placeholder="Indentificador Vacaciones">
-								</div>
 								<div class="col-sm-10 mx-auto">
 									<label><strong>Nombre:</strong></label>
 									<input type="text" class="form-control form-control-sm" placeholder="Nombre">
@@ -82,28 +94,25 @@
 									</select>
 								</div>
 								<div class="col-sm-10 mx-auto">
-									<label><strong>Comentario:</strong></label>
-									<textarea class="form-control form-control-sm"></textarea>
+									<label><strong>Nombre Usuario:</strong></label>
+									<input type="text" disabled class="form-control form-control-sm" placeholder="Nombre Usuario">
 								</div>
 								<div class="col-sm-10 mx-auto">
-									<label><strong>Fecha Inicial:</strong></label>
-									<input type="date" id="EditarInicial" class="form-control form-control-sm" placeholder="Movil Personal">
+									<label><strong>Tipo Usuario:</strong></label>
+									<select class="form-control form-control-sm" id="exampleFormControlSelect1">
+										<option selected>-Seleccione-</option>
+										<option>Administrador</option>
+										<option>Regular</option>
+									</select>
 								</div>
-								<div class="col-sm-10 mx-auto">
-									<label><strong>Fecha Final:</strong></label>
-									<input type="date" id="EditarFinal" class="form-control form-control-sm" placeholder="Extensión">
-								</div>
-								<div class="col-sm-10 mx-auto">
-									<label><strong>Total Dias:</strong></label>
-									<input type="text" id="diasEditar" disabled class="form-control form-control-sm" placeholder="Total dias">
-								</div>
-							</div>
-
-							<div class="col">
+								
 								<div class="col-sm-10 mx-auto">
 									<label><strong>Fecha Creación:</strong></label>
 									<input type="date" disabled class="form-control form-control-sm" placeholder="Fecha Creación">
 								</div>
+							</div>
+
+							<div class="col">
 								<div class="col-sm-10 mx-auto">
 									<label><strong>Hora Creación:</strong></label>
 									<input type="text" disabled class="form-control form-control-sm" placeholder="Hora">
@@ -113,12 +122,8 @@
 									<input type="text" disabled class="form-control form-control-sm" placeholder="Fecha Modificación">
 								</div>
 								<div class="col-sm-10 mx-auto">
-									<label><strong>Fecha de Aprobación:</strong></label>
-									<input type="date" disabled class="form-control form-control-sm" placeholder="Fecha de Aprobación">
-								</div>
-								<div class="col-sm-10 mx-auto">
-									<label><strong>Usuario Creador:</strong></label>
-									<input type="text" disabled class="form-control form-control-sm" placeholder="Usuario Creador">
+									<label><strong>Usuario creador:</strong></label>
+									<input type="text" disabled class="form-control form-control-sm" placeholder="Usuario creador">
 								</div>
 								<div class="col-sm-10 mx-auto">
 									<label><strong>Usuario Modificador:</strong></label>
@@ -136,6 +141,8 @@
 										<option>Inactivo</option>
 									</select>
 								</div>
+
+
 							</div>
 						</div>
 					</form>
@@ -150,4 +157,4 @@
 			</div>
 		</div>
 	</div>
-	<!-- Modal Editar Vacaciones -->
+	<!-- Modal Editar Usuario -->

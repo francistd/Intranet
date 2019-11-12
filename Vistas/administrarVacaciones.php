@@ -22,11 +22,7 @@
 				</div>
 				<!-- Prueba -->
 				<hr>
-				<div class="col-md-12" style="margin-bottom: 4px">
-					<div class="text-center">
-						<button class=" agregaEmp btn btn-success text-right"><i class="fas fa-plus"></i> </button>
-					</div>
-				</div>
+				
 				<!-- Prueba -->
 				<div class="rounded alert-light">
 					<table class="table table-sm table-hover">
@@ -60,7 +56,7 @@
 								</td>
 
 								<td>
-									<button class="Edita btn btn-primary btn-sm" style="margin-bottom: 4px"><i class="fas fa-external-link-alt"></i></button>
+									<button class="Edita btn btn-primary btn-sm" data-toggle="modal" data-target="#EditarAdmVacaci" style="margin-bottom: 4px"><i class="fas fa-external-link-alt"></i></button>
 									<button class="Borra btn btn-danger btn-sm" style="margin-bottom: 4px"><i class="far fa-trash-alt"></i></button>
 								</td>
 
@@ -116,6 +112,7 @@
 			</div>
 		</div>
 	</div>
+	<?php include "Modal/modalAdmVacaci.php" ?>
 <!-- Pie -->
 <?php require_once "pie.php" ?>
 <!-- Pie -->
