@@ -28,3 +28,4 @@
 <script src="../JS/empleado.js"></script>
 <script src="../JS/vacaciones.js"></script>
 <script src="../JS/administrarVacaciones.js"></script>
+<script src="../JS/solicitudCompra.js"></script>
