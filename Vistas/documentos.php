@@ -15,22 +15,6 @@
 				<!-- Cabecera -->
 				<div class="container" > 
 					<div class="col-md-12 mx-auto" style="margin-bottom: 4px">
-						<div class="text-center">
-							<strong><i class="fas fa-search"></i></strong>
-							<label class="text-center">Búsqueda<input type="text" id="buscarVT" name="buscarVT" class="form-control form-control-sm"></label>
-
-							<strong><i class="fas fa-filter"></i></strong>
-							<label>Departamento<select id="estado" name="estado" class=" form-control form-control-sm ">
-								<option value="">-Seleccione-</option>
-								<option>Dirección</option>
-								<option>Contabilidad y Administración</option>
-								<option>Creditos y Cobros</option>
-								<option>Tecnología</option>
-								<option>Capacitación</option>
-							</select></label>
-
-							<label><button class="buscar btn btn-secondary btn-sm "><i class="fas fa-search"></i> Buscar</button></label>
-						</div>
 
 					</div>
 				</div>
@@ -38,7 +22,7 @@
 				<hr>
 				<div class="col-md-12" style="margin-bottom: 4px">
 					<div class="text-center">
-						<button class="btn btn-success  text-right b"><i class="fas fa-plus"></i> </button>
+						<button class="btn btn-success  text-right b" data-toggle="modal" data-target="#AgregaDocumento"><i class="fas fa-plus"></i> </button>
 					</div>
 				</div>
 
@@ -46,7 +30,8 @@
 				<div class="col-md-12" style="margin-bottom: 4px">
 					<div class="text-center ">
 						<figure class="figure ">
-							<img src="../Imagenes/Direccion.jpg" class=" shrink figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." height="160" width="160">
+							<a href="#DocumentosDireccion" data-toggle="modal">
+							<img src="../Imagenes/Direccion.jpg" class=" shrink figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." height="160" width="160"></a>
 							<figcaption class="figure-caption text-center"><strong><span class="badge badge-pill badge-dark">Dirección</span></strong></figcaption>
 						</figure>
 						<figure class="figure ">
@@ -77,7 +62,7 @@
 			
 		</div>
 	</div>
-	
+	<?php include "Modal/modalDocumentos.php" ?>
 <!-- Pie -->
 <?php require_once "pie.php" ?>
 <!-- Pie -->

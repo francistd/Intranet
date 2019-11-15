@@ -29,3 +29,5 @@
 <script src="../JS/vacaciones.js"></script>
 <script src="../JS/administrarVacaciones.js"></script>
 <script src="../JS/solicitudCompra.js"></script>
+<script src="../JS/administrarOrdenes.js"></script>
+<script src="../JS/documentos.js"></script>
