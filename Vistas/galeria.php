@@ -19,10 +19,6 @@
 							<strong><i class="fas fa-search"></i></strong>
 							<label class="text-center">Búsqueda<input type="text" id="buscarVT" name="buscarVT" class="form-control form-control-sm"></label>
 
-							<label> Desde<input type = "date"  id="fecha_inicialVT" name="fecha_inicialVT" class="form-control form-control-sm"></label>
-
-							<strong><i class="far fa-calendar-alt"></i> </strong>
-							<label> Hasta<input type = "date"  id="fecha_finalVT" name="fecha_finalVT"  class="form-control form-control-sm"></label>
 
 							<label><button class="buscar btn btn-secondary btn-sm "><i class="fas fa-search"></i> Buscar</button></label>
 						</div>
@@ -31,9 +27,10 @@
 				</div>
 				<!-- Cabecera -->
 				<hr>
-				<div class="col-md-12" style="margin-bottom: 4px">
+				<div class="col-md-12" style="margin-bottom: 6px">
 					<div class="text-center">
-						<button class="btn btn-success  text-right b"><i class="fas fa-plus"></i> </button>
+						<button class="btn btn-success btn-sm text-right b" data-toggle="modal" data-target="#AgregaAlbum"><i class="fas fa-plus"></i> Album</button>
+						<button class="btn btn-success btn-sm text-right b" data-toggle="modal" data-target="#AgregaFoto"><i class="fas fa-plus"></i> Foto</button>
 					</div>
 				</div>
 
@@ -42,7 +39,8 @@
 					<div class="text-center ">
 						
 						<figure class="figure">
-							<img src="../Imagenes/Direccion.jpg" class=" Album figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." height="300" width="300">
+							<a href="#AgregaVerAlbum" data-toggle="modal">
+							<img src="../Imagenes/Direccion.jpg" class=" Album figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." height="300" width="300"></a>
 							<figcaption class="figure-caption text-center"><strong><span class="badge badge-pill badge-dark">Dirección</span></strong></figcaption>
 						</figure>
 
@@ -82,7 +80,7 @@
 			
 		</div>
 	</div>
-	
+	<?php include "Modal/modalGaleria.php" ?>
 <!-- Pie -->
 <?php require_once "pie.php" ?>
 <!-- Pie -->

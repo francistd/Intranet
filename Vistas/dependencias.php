@@ -7,6 +7,8 @@
 <link rel="stylesheet" type="text/css" href="../CSS/galeria.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../CSS/noticias.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../CSS/perfil.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../CSS/login.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../CSS/navBarLogin.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../Librerias/bootstrap-4.3.1/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../Librerias/fontawesome-free/css/all.min.css">
 
@@ -31,3 +33,7 @@
 <script src="../JS/solicitudCompra.js"></script>
 <script src="../JS/administrarOrdenes.js"></script>
 <script src="../JS/documentos.js"></script>
+<script src="../JS/album.js"></script>
+<script src="../JS/perfil.js"></script>
+<script src="../JS/publicacion.js"></script>
+<script src="../JS/usuarios.js"></script>

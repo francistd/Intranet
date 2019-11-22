@@ -1,0 +1,32 @@
+#nombre {
+	color: darkblue;
+}
+
+#colibri {
+	width: 200px;
+}
+
+#cajalogin {
+	margin-top: 35px;
+}
+
+#colibri:hover
+{
+-webkit-transform: scale(1.2);
+-ms-transform: scale(1.2);
+transform: scale(0.80);
+}
+
+/*Aquii*/
+.icono {
+  position: absolute;
+  padding: 12px;
+  padding-top: 16px;
+  pointer-events: none;
+  color: #808B96  ;
+}
+
+.form-control {
+  padding-left: 30px!important;
+}
+

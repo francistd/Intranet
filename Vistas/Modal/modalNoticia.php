@@ -10,29 +10,29 @@
 			</div>
 			<div class="modal-body">
 				<form>
-					<div class="form-group">
-						<div class="input-group mb-3">
-							<div class="input-group-prepend">
-								<span class="input-group-text" id="inputGroupFileAddon01"><i class="fas fa-camera-retro"></i></span>
+					<div class="col">
+						<div class="col-sm-10 mx-auto">
+							<label><strong>Foto Noticia:</strong></label>
+							<div class="fileUpload btn btn-secondary btn-sm" >
+								<span>Examinar... <i class="fas fa-cloud-upload-alt"></i></span>
+								<input type="file" class="upload"id="file-upload-Noticia" />
 							</div>
-							<div class="custom-file">
-								<input type="file" id="file-upload" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-								<label class="custom-file-label" for="inputGroupFile01">Seleccione Archivo</label>
+
+							<div class="text-center" id="file-preview-zone-Noticia">
+
 							</div>
+
 						</div>
-					</div>
-					<div class="text-center" id="file-preview-zone">
 
-					</div>
+						<div class="col-sm-10 mx-auto">
+							<label><strong>Título</strong></label>
+							<input type="text" id="idu" placeholder="Título" name="idu" class="form-control form-control-sm">
+						</div>
 
-					<div class="form-group">
-						<label><strong>Título</strong></label>
-						<input type="text" id="idu" placeholder="Título" name="idu" class="form-control form-control-sm">
-					</div>
-
-					<div class="form-group">
-						<label for="message-text" class="col-form-label"><strong>Texto</strong></label>
-						<textarea class="form-control form-control-sm" placeholder="Texto" id="message-text"></textarea>
+						<div class="col-sm-10 mx-auto">
+							<label for="message-text" class="col-form-label"><strong>Texto</strong></label>
+							<textarea class="form-control form-control-sm" placeholder="Texto" id="message-text"></textarea>
+						</div>
 					</div>
 
 				</form>
@@ -62,29 +62,29 @@
 			<div class="modal-body">
 
 				<form>
-					<div class="form-group">
-						<div class="input-group mb-3">
-							<div class="input-group-prepend">
-								<span class="input-group-text" id="inputGroupFileAddon01"><i class="fas fa-camera-retro"></i></span>
+					<div class="col">
+						<div class="col-sm-10 mx-auto">
+							<label><strong>Foto Noticia:</strong></label>
+							<div class="fileUpload btn btn-secondary btn-sm" >
+								<span>Examinar... <i class="fas fa-cloud-upload-alt"></i></span>
+								<input type="file" class="upload"id="file-upload-Editar-Noticia" />
 							</div>
-							<div class="custom-file">
-								<input type="file" id="file-upload-Edit" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-								<label class="custom-file-label" for="inputGroupFile01">Seleccione Archivo</label>
+
+							<div class="text-center" id="file-preview-zone-Editar-Noticia">
+
 							</div>
+
 						</div>
-					</div>
-					<div class="text-center" id="file-preview-zone-Edit">
 
-					</div>
+						<div class="col-sm-10 mx-auto">
+							<label><strong>Título</strong></label>
+							<input type="text" id="idu" placeholder="Título" name="idu" class="form-control form-control-sm">
+						</div>
 
-					<div class="form-group">
-						<label><strong>Título</strong></label>
-						<input type="text" id="idu" placeholder="Título" name="idu" class="form-control form-control-sm">
-					</div>
-
-					<div class="form-group">
-						<label for="message-text" class="col-form-label"><strong>Texto</strong></label>
-						<textarea class="form-control form-control-sm" placeholder="Texto" id="message-text"></textarea>
+						<div class="col-sm-10 mx-auto">
+							<label for="message-text" class="col-form-label"><strong>Texto</strong></label>
+							<textarea class="form-control form-control-sm" placeholder="Texto" id="message-text"></textarea>
+						</div>
 					</div>
 
 				</form>

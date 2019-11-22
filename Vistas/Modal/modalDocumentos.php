@@ -15,6 +15,14 @@
 							<label><strong>Nombre Documento:</strong></label>
 							<input type="text" id="Inicial" class="form-control form-control-sm" placeholder="Nombre Documento">
 						</div>
+						<div class="col-sm-10 mx-auto">
+								<label><strong>Tipo Documento:</strong></label>
+								<select class="form-control form-control-sm" id="exampleFormControlSelect1">
+									<option selected>-Seleccione-</option>
+									<option>Administración</option>
+									<option>General</option>
+								</select>
+							</div>
 
 						<div class="col-sm-10 mx-auto">
 							<label><strong>Ruta Documento:</strong></label>

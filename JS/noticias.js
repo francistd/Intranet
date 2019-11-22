@@ -1,7 +1,8 @@
+// Agregar Noticia
 $(document).ready(function() {
   if (window.File && window.FileList && window.FileReader) {
-    $("#file-upload").on("change", function(e) {
-      $("#file-upload").prop('disabled', true);
+    $("#file-upload-Noticia").on("change", function(e) {
+      $("#file-upload-Noticia").prop('disabled', true);
       var files = e.target.files,
       filesLength = files.length;
 
@@ -11,15 +12,15 @@ $(document).ready(function() {
         var fileReader = new FileReader();
         fileReader.onload = (function(e) {
           var file = e.target;
-          $("<div class='text-center'><a href='#'><span class=\"pip\">" +
-            "<div class='text-center'><img style='border-radius: 4px' width='200' height='150' class=\"imageThumb\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/></div>" +
-            "<br/><span class=\"remove\">Eliminar</span>" +
-            "</span></a></div>").insertAfter("#file-preview-zone");
+          $("<div class='text-center'><a href='#'><span class=\"pip-Noticia\">" +
+            "<div class='text-center'><img style='border-radius: 4px' width='200' height='150' class=\"imageThumb-Noticia\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/></div>" +
+            "<br/><span class=\"remove-Noticia\">Eliminar</span>" +
+            "</span></a></div>").insertAfter("#file-preview-zone-Noticia");
 
-          $(".remove").click(function(){
-            $(this).parent(".pip").remove();
-            $("#file-upload").val('');
-            $("#file-upload").prop('disabled', false);
+          $(".remove-Noticia").click(function(){
+            $(this).parent(".pip-Noticia").remove();
+            $("#file-upload-Noticia").val('');
+            $("#file-upload-Noticia").prop('disabled', false);
           });
           
         });
@@ -34,11 +35,13 @@ $(document).ready(function() {
   }
   
 });
+// Agregar Noticia
 
+// Editar Noticia
 $(document).ready(function() {
   if (window.File && window.FileList && window.FileReader) {
-    $("#file-upload-Edit").on("change", function(e) {
-      $("#file-upload-Edit").prop('disabled', true);
+    $("#file-upload-Editar-Noticia").on("change", function(e) {
+      $("#file-upload-Editar-Noticia").prop('disabled', true);
       var files = e.target.files,
       filesLength = files.length;
 
@@ -48,15 +51,15 @@ $(document).ready(function() {
         var fileReader = new FileReader();
         fileReader.onload = (function(e) {
           var file = e.target;
-          $("<div class='text-center'><a href='#'><span class=\"pip-Edit\">" +
-            "<div class='text-center'><img style='border-radius: 4px' width='200' height='150' class=\"imageThumb-Edit\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/></div>" +
-            "<br/><span class=\"remove-Edit\">Eliminar</span>" +
-            "</span></a></div>").insertAfter("#file-preview-zone-Edit");
+          $("<div class='text-center'><a href='#'><span class=\"pip-Editar-Noticia\">" +
+            "<div class='text-center'><img style='border-radius: 4px' width='200' height='150' class=\"imageThumb-Editar-Noticia\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/></div>" +
+            "<br/><span class=\"remove-Editar-Noticia\">Eliminar</span>" +
+            "</span></a></div>").insertAfter("#file-preview-zone-Editar-Noticia");
 
-          $(".remove-Edit").click(function(){
-            $(this).parent(".pip-Edit").remove();
-            $("#file-upload-Edit").val('');
-            $("#file-upload-Edit").prop('disabled', false);
+          $(".remove-Editar-Noticia").click(function(){
+            $(this).parent(".pip-Editar-Noticia").remove();
+            $("#file-upload-Editar-Noticia").val('');
+            $("#file-upload-Editar-Noticia").prop('disabled', false);
           });
           
         });
@@ -71,7 +74,7 @@ $(document).ready(function() {
   }
   
 });
-
+// Editar Noticia
 
 
 

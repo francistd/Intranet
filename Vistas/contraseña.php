@@ -54,8 +54,7 @@
 								</td>
 
 								<td>
-									<button class="Edita btn btn-primary btn-sm" style="margin-bottom: 4px"><i class="fas fa-external-link-alt"></i></button>
-									<button class="Borra btn btn-danger btn-sm" style="margin-bottom: 4px"><i class="far fa-trash-alt"></i></button>
+									<button class="Edita btn btn-primary btn-sm" data-toggle="modal" data-target="#ModalContraseña" style="margin-bottom: 4px"><i class="fas fa-external-link-alt"></i></button>
 								</td>
 
 							</tr>
@@ -68,6 +67,7 @@
 			</div>
 		</div>
 	</div>
+	<?php include "Modal/modalContraseña.php" ?>
 <!-- Pie -->
 <?php require_once "pie.php" ?>
 <!-- Pie -->

@@ -16,3 +16,14 @@ Cartas
 
 SELECT cart.id_carta,emp.nombre,emp.apellido,cart.descripcion,cart.tipo_carta FROM tbl_cartas as cart INNER JOIN tbl_empleados as emp on cart.id_emp = emp.id_emp
 --------------------------------------------------------------------------------------------------------------------------
+Login
+
+SELECT Usu.id_usu, Usu.id_emp, Usu.user_name, Usu.pass, Emp.id_emp, Emp.nombre, Emp.apellido FROM `tbl_usuarios` as Usu INNER JOIN tbl_empleados as Emp on Usu.id_emp = Emp.id_emp WHERE Usu.user_name = 'tavarezju' and Usu.pass = 'ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f'
+--------------------------------------------------------------------------------------------------------------------------
+
+
+https://victorroblesweb.es/2013/11/11/la-extension-mysqli-en-php/ 
+
+https://www.solvetic.com/tutoriales/article/1528-clase-para-gestionar-bases-de-datos-mysql-con-mysqli-y-php/ 
+
+http://www.forosdelweb.com/f18/insertar-datos-con-php-orientado-objetos-1108331/

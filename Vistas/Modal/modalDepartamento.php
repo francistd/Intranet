@@ -11,34 +11,26 @@
 			<div class="modal-body">
 
 				<form>
-					<div class="form-group">
-						<div class="input-group mb-3">
-							<div class="input-group-prepend">
-								<span class="input-group-text" id="inputGroupFileAddon01"><i class="fas fa-camera-retro"></i></span>
+					<!-- Aqui -->
+					<div class="col">
+						<div class="col-sm-10 mx-auto">
+							<label><strong>Foto Departamento:</strong></label>
+							<div class="fileUpload btn btn-secondary btn-sm" >
+								<span>Examinar... <i class="fas fa-cloud-upload-alt"></i></span>
+								<input type="file" class="upload"id="file-upload-Depart" />
 							</div>
-							<div class="custom-file">
-								<input type="file" id="file-upload-Dep" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-								<label class="custom-file-label" for="inputGroupFile01">Seleccione Archivo</label>
+
+							<div class="text-center" id="file-preview-zone-Depart">
+
 							</div>
 						</div>
+						<div class="col-sm-10 mx-auto">
+							<label><strong>Nombre Departamento</strong></label>
+							<input type="text" id="idu" placeholder="Departamento" name="idu" class="form-control form-control-sm">
+						</div>
+						
 					</div>
-					<div class="text-center" id="file-preview-zone-Dep">
-
-					</div>
-
-					<div class="form-group">
-						<label><strong>Nombre Departamento</strong></label>
-						<input type="text" id="idu" placeholder="Departamento" name="idu" class="form-control form-control-sm">
-					</div>
-
-					<div class="form-group">
-						<label for="message-text" class="col-form-label"><strong>Estado</strong></label>
-						<select class="form-control form-control-sm" id="exampleFormControlSelect1">
-							<option selected>-Seleccione-</option>
-							<option>Activo</option>
-							<option>Inactivo</option>
-						</select>
-					</div>
+					<!-- Aqui -->
 
 				</form>
 
@@ -50,9 +42,9 @@
 		</div>
 	</div>
 </div>
-	<!-- Modal Agregar Departamento -->
+<!-- Modal Agregar Departamento -->
 
-	<!-- Modal Editar Departamento -->
+<!-- Modal Editar Departamento -->
 <div class="modal fade" id="EditarDepartamento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
@@ -65,34 +57,34 @@
 			<div class="modal-body">
 
 				<form>
-					<div class="form-group">
-						<div class="input-group mb-3">
-							<div class="input-group-prepend">
-								<span class="input-group-text" id="inputGroupFileAddon01"><i class="fas fa-camera-retro"></i></span>
+					<div class="col">
+						
+							<div class="col-sm-10 mx-auto">
+							<label><strong>Foto Departamento:</strong></label>
+							<div class="fileUpload btn btn-secondary btn-sm" >
+								<span>Examinar... <i class="fas fa-cloud-upload-alt"></i></span>
+								<input type="file" class="upload"id="file-upload-editar-Depart" />
 							</div>
-							<div class="custom-file">
-								<input type="file" id="file-upload-Dep-Edit" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-								<label class="custom-file-label" for="inputGroupFile01">Seleccione Archivo</label>
+
+							<div class="text-center" id="file-preview-zone-editar-Depart">
+
 							</div>
 						</div>
-					</div>
-					<div class="text-center" id="file-preview-zone-Dep-Edit">
 
-					</div>
+							<div class="col-sm-10 mx-auto">
+								<label><strong>Nombre Departamento</strong></label>
+								<input type="text" id="idu" placeholder="Departamento" name="idu" class="form-control form-control-sm">
+							</div>
 
-					<div class="form-group">
-						<label><strong>Nombre Departamento</strong></label>
-						<input type="text" id="idu" placeholder="Departamento" name="idu" class="form-control form-control-sm">
-					</div>
-
-					<div class="form-group">
-						<label for="message-text" class="col-form-label"><strong>Estado</strong></label>
-						<select class="form-control form-control-sm" id="exampleFormControlSelect1">
-							<option selected>-Seleccione-</option>
-							<option>Activo</option>
-							<option>Inactivo</option>
-						</select>
-					</div>
+							<div class="col-sm-10 mx-auto">
+								<label for="message-text" class="col-form-label"><strong>Estado</strong></label>
+								<select class="form-control form-control-sm" id="exampleFormControlSelect1">
+									<option selected>-Seleccione-</option>
+									<option>Activo</option>
+									<option>Inactivo</option>
+								</select>
+							</div>
+						</div>
 
 				</form>
 
@@ -104,4 +96,4 @@
 		</div>
 	</div>
 </div>
-	<!-- Modal Editar Departamento -->
+	<!-- Modal Editar Departamento

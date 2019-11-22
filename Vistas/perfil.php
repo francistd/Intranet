@@ -18,7 +18,7 @@
 						<img src="../Imagenes/log.jpg" class=" perfil rounded-circle" width="200" height="200">
 					</div>
 					<div class="text-center">
-						<button class="Edita btn btn-success btn-sm" style="margin-bottom: 10px; margin-top: 10px">Actualizar <i class="fas fa-external-link-alt"></i></button>
+						<button class="Edita btn btn-success btn-sm" data-toggle="modal" data-target="#AgregaFotoPerfil" style="margin-bottom: 10px; margin-top: 10px">Foto... <i class="fas fa-external-link-alt"></i></button>
 					</div>
 				</div>
 
@@ -111,6 +111,7 @@
 			</div>
 		</div>
 	</div>
+	<?php include "Modal/modalPerfil.php" ?>
 	<!-- Pie -->
 	<?php require_once "pie.php" ?>
 	<!-- Pie -->

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-	<?php require_once "dependencias.php"; ?> <!-- #0b8793 -->
+	<?php session_start(); require_once "dependencias.php"; ?> <!-- #0b8793 -->
 </head>
 <body style="background-color: #000046">
 	
@@ -91,6 +91,8 @@
 						<a class="dropdown-item" target="_blank" href="http://10.1.10.91:8080/FonTicket/index.php"><i class="fas fa-cogs"></i> FonTicket</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="reportes.php"><i class="fas fa-chart-line"></i> Reportes</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="lema.php"><i class="fas fa-book-open"></i> Lema</a>
 
 						<!-- Submenu -->
 						<div class="dropdown-divider"></div>
@@ -124,14 +126,14 @@
 			<ul class="menu navbar-nav ml-auto nav-flex-icons">
 				
 				<li class="nav-item dropdown active">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Juan Tavarez
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  <?php echo $_SESSION['nombre']." ".$_SESSION['apellido']; ?>
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="perfil.php"><i class="far fa-id-card"></i> Perfil</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="contraseña.php"><i class="fas fa-key"></i> Contraseña</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Salir</a>
+						<a class="dropdown-item" href="salir.php"><i class="fas fa-sign-out-alt"></i> Salir</a>
 						
 					</div>
 				</li>

@@ -1,7 +1,8 @@
+// Agregar Departamento
 $(document).ready(function() {
   if (window.File && window.FileList && window.FileReader) {
-    $("#file-upload-Dep").on("change", function(e) {
-      $("#file-upload-Dep").prop('disabled', true);
+    $("#file-upload-Depart").on("change", function(e) {
+      $("#file-upload-Depart").prop('disabled', true);
       var files = e.target.files,
       filesLength = files.length;
 
@@ -11,15 +12,15 @@ $(document).ready(function() {
         var fileReader = new FileReader();
         fileReader.onload = (function(e) {
           var file = e.target;
-          $("<div class='text-center'><a href='#'><span class=\"pip-Dep\">" +
-            "<div class='text-center'><img style='border-radius: 4px' width='200' height='150' class=\"imageThumb-Dep\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/></div>" +
-            "<br/><span class=\"remove-Dep\">Eliminar</span>" +
-            "</span></a></div>").insertAfter("#file-preview-zone-Dep");
+          $("<div class='text-center'><a href='#'><span class=\"pip-Depart\">" +
+            "<div class='text-center'><img style='border-radius: 4px' width='200' height='150' class=\"imageThumb-Depart\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/></div>" +
+            "<br/><span class=\"remove-Depart\">Eliminar</span>" +
+            "</span></a></div>").insertAfter("#file-preview-zone-Depart");
 
-          $(".remove-Dep").click(function(){
-            $(this).parent(".pip-Dep").remove();
-            $("#file-upload-Dep").val('');
-            $("#file-upload-Dep").prop('disabled', false);
+          $(".remove-Depart").click(function(){
+            $(this).parent(".pip-Depart").remove();
+            $("#file-upload-Depart").val('');
+            $("#file-upload-Depart").prop('disabled', false);
           });
           
         });
@@ -34,11 +35,13 @@ $(document).ready(function() {
   }
   
 });
+// Agregar Departamento
 
+// Editar Departamento
 $(document).ready(function() {
   if (window.File && window.FileList && window.FileReader) {
-    $("#file-upload-Dep-Edit").on("change", function(e) {
-      $("#file-upload-Dep-Edit").prop('disabled', true);
+    $("#file-upload-editar-Depart").on("change", function(e) {
+      $("#file-upload-editar-Depart").prop('disabled', true);
       var files = e.target.files,
       filesLength = files.length;
 
@@ -48,15 +51,15 @@ $(document).ready(function() {
         var fileReader = new FileReader();
         fileReader.onload = (function(e) {
           var file = e.target;
-          $("<div class='text-center'><a href='#'><span class=\"pip-Dep-Edit\">" +
-            "<div class='text-center'><img style='border-radius: 4px' width='200' height='150' class=\"imageThumb-Dep-Edit\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/></div>" +
-            "<br/><span class=\"remove-Dep-Edit\">Eliminar</span>" +
-            "</span></a></div>").insertAfter("#file-preview-zone-Dep-Edit");
+          $("<div class='text-center'><a href='#'><span class=\"pip-editar-Depart\">" +
+            "<div class='text-center'><img style='border-radius: 4px' width='200' height='150' class=\"imageThumb-editar-Depart\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/></div>" +
+            "<br/><span class=\"remove-editar-Depart\">Eliminar</span>" +
+            "</span></a></div>").insertAfter("#file-preview-zone-editar-Depart");
 
-          $(".remove-Dep-Edit").click(function(){
-            $(this).parent(".pip-Dep-Edit").remove();
-            $("#file-upload-Dep-Edit").val('');
-            $("#file-upload-Dep-Edit").prop('disabled', false);
+          $(".remove-editar-Depart").click(function(){
+            $(this).parent(".pip-editar-Depart").remove();
+            $("#file-upload-editar-Depart").val('');
+            $("#file-upload-editar-Depart").prop('disabled', false);
           });
           
         });
@@ -71,7 +74,7 @@ $(document).ready(function() {
   }
   
 });
-
+// Editar Departamento
 
 
 
