@@ -1,4 +1,5 @@
 <?php 
+
 include "../Conexion/conexion.php";
 
 $con = conexion();
@@ -35,4 +36,4 @@ $stmt->store_result();
             $stmt->close();
             $con->close();
 
-            ?>
+?>

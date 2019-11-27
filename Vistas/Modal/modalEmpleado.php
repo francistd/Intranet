@@ -9,13 +9,15 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<form>
+				<form id="frmAgregaEmp">
 
 					<div class="text-center">
 						<label><strong>Foto</strong></label>
 						<div class="fileUpload btn btn-secondary btn-sm" >
-							<span>Examinar... <i class="fas fa-cloud-upload-alt"></i></span>
-							<input type="file" class="upload"id="file-upload-Emp" />
+							<!-- <span>Examinar... <i class="fas fa-cloud-upload-alt"></i></span> -->
+							<!-- <input type="file" id="file-upload-Emp" name="file-upload-Emp" class="upload"/> -->
+							<input type="file" name="img">
+
 						</div>
 					</div>
 
@@ -27,34 +29,34 @@
 						<div class="col">
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Nombre:</strong></label>
-								<input type="text" class="form-control form-control-sm" placeholder="Nombre">
+								<input type="text" id="nombre_emp" name="nombre_emp" class="form-control form-control-sm" placeholder="Nombre">
 							</div>
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Apellido:</strong></label>
-								<input type="text" class="form-control form-control-sm" placeholder="Apellido">
+								<input type="text" id="apellido_emp" name="apellido_emp" class="form-control form-control-sm" placeholder="Apellido">
 							</div>
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Departamento:</strong></label>
-								<select class="form-control form-control-sm" id="exampleFormControlSelect1">
+								<select class="form-control form-control-sm" id="select_dep_emp" name="select_dep_emp">
 									<option selected>-Seleccione-</option>
-									<option>Dirección</option>
-									<option>Contabilidad y Adm</option>
-									<option>Creditos y Cobros</option>
-									<option>Tecnología</option>
-									<option>Capacitación</option>
+									<option value="5">Dirección</option>
+									<option value="2">Contabilidad y Adm</option>
+									<option value="3">Creditos y Cobros</option>
+									<option value="1">Tecnología</option>
+									<option value="4">Capacitación</option>
 								</select>
 							</div>
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Correo Electrónico:</strong></label>
-								<input type="text" class="form-control form-control-sm" placeholder="Correo Electrónico">
+								<input type="text" id="correo_emp" name="correo_emp" class="form-control form-control-sm" placeholder="Correo Electrónico">
 							</div>
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Dirección:</strong></label>
-								<input type="text" class="form-control form-control-sm" placeholder="Dirección">
+								<input type="text" id="direccion_emp" name="direccion_emp" class="form-control form-control-sm" placeholder="Dirección">
 							</div>
 
 						</div>
@@ -63,7 +65,7 @@
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Género:</strong></label>
-								<select class="form-control form-control-sm" id="exampleFormControlSelect1">
+								<select class="form-control form-control-sm" id="select_emp_genero" name="select_emp_genero">
 									<option selected>-Seleccione-</option>
 									<option>Masculino</option>
 									<option>Femenino</option>
@@ -72,17 +74,17 @@
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Posición:</strong></label>
-								<input type="text" class="form-control form-control-sm" placeholder="Posición">
+								<input type="text" id="posicion_emp" name="posicion_emp" class="form-control form-control-sm" placeholder="Posición">
 							</div>
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Teléfono:</strong></label>
-								<input type="text" class="form-control form-control-sm" placeholder="Teléfono">
+								<input type="text" id="telefono_emp" name="telefono_emp" class="form-control form-control-sm" placeholder="Teléfono">
 							</div>
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Fecha Nacimiento:</strong></label>
-								<input type="date" class="form-control form-control-sm" placeholder="Fecha Nacimiento">
+								<input type="date" id="fecha_nac_emp" name="fecha_nac_emp" class="form-control form-control-sm" placeholder="Fecha Nacimiento">
 							</div>
 
 						</div>
@@ -93,7 +95,7 @@
 			<div class="modal-footer ">
 				<div class="mx-auto">
 					<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fas fa-window-close"></i> <strong>Cerrar</strong></button>
-					<button type="button" class="btn btn-warning btn-sm"><i class="far fa-save"></i> <strong>Guardar</strong></button>
+					<button type="button" id="btn_guardar_emp" onclick="guardarEmp()" class="btn btn-warning btn-sm"><i class="far fa-save"></i> <strong>Guardar</strong></button>
 				</div>
 			</div>
 		</div>

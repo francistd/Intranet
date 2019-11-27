@@ -76,3 +76,34 @@ $(document).ready(function() {
   
 });
 // Editar Empleado
+
+
+// Agregar Empleado
+
+function guardarEmp(){
+
+  if ($('#nombre_emp').val()=="") {
+    swal("Por Favor!", "Debe agregar un nombre de categoria!","error");
+    return false;
+  }
+
+
+  $.ajax({
+    type: "POST",
+    url: "../Procesos/Empleados/GuardarEmpleados.php",
+    data: $("#frmAgregaEmp").serialize(),
+    success:function(r){
+      if (r==1) {
+        $("#frmAgregaEmp")[0].reset();
+        // mostrarDatosCAT();
+        // $('body').removeClass('modal-open');
+        // $('.modal-backdrop').remove();
+        swal("Agregado","Con Exito","success");
+      }else{
+        swal("Fallo al Agregar","error","error");
+        console.log(r);
+      }
+    }
+
+  });
+}

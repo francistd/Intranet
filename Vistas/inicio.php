@@ -200,7 +200,7 @@ if (isset($_SESSION['usuario'])) {
 									<!-- Fecha -->
 									<div class="col-md-6 float-right" >
 										<div class="text-right">
-											<p><strong><span class="badge badge-pill badge-secondary">30/09/2019</span></strong></p>
+											<p><strong><span class="badge badge-pill badge-secondary">30/09/2019></span></strong></p>
 										</div>
 									</div>
 									<!-- Fecha -->
