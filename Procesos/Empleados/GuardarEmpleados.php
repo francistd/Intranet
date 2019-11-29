@@ -83,6 +83,7 @@ $stmt->bind_param('ssisssssssssssss',
 	$datos[15]);
 
 echo $stmt->execute();
+$ultimoID = 0;
 $ultimoID = mysqli_insert_id($con);
 $stmt->close();
 

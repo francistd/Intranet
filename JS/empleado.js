@@ -127,6 +127,8 @@ $(document).ready(function(){
       contentType: false,
       processData: false,
       success: function(data){
+        $('#frmAgregaEmp')[0].reset();
+        $(this).parent(".pip-Emp").remove();
         console.log("success");
       },
       error: function(jqXHR, textStatus, errorThrown) {
