@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS `tbl_usuarios` (
 	`id_emp` int(10),
 	`id_dep` int(10),
 	`user_name` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
-	`pass` varchar(60) COLLATE utf8_unicode_ci DEFAULT NULL,
+	`pass` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
 	`tipo_usu` varchar(60) COLLATE utf8_unicode_ci DEFAULT NULL,
 	`fecha_crea` date DEFAULT NULL,
 	`hora` time NULL,
@@ -26,10 +26,9 @@ CREATE TABLE IF NOT EXISTS `tbl_usuarios` (
 /*Creamos la tabla empleados*/
 CREATE TABLE IF NOT EXISTS `tbl_empleados` (
 	`id_emp` int(10) NOT NULL AUTO_INCREMENT,
-	`ìd_usu` int(10),
 	`nombre` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
 	`apellido` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
-	`ìd_dep` int(10),
+	`id_dep` int(10),
 	`email` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
 	`direccion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
 	`genero` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL,

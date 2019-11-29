@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
 <!-- Modal Agregar Empleado -->
 <div class="modal fade" id="AgregaEmpleado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-xl" role="document">
@@ -9,15 +15,14 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<form id="frmAgregaEmp">
+				<form enctype="multipart/form-data" id="frmAgregaEmp" >
 
 					<div class="text-center">
 						<label><strong>Foto</strong></label>
 						<div class="fileUpload btn btn-secondary btn-sm" >
-							<!-- <span>Examinar... <i class="fas fa-cloud-upload-alt"></i></span> -->
-							<!-- <input type="file" id="file-upload-Emp" name="file-upload-Emp" class="upload"/> -->
-							<input type="file" name="img">
-
+							<span>Examinar... <i class="fas fa-cloud-upload-alt"></i></span>
+							<input type="file" id="file-upload-Emp" name="file-upload-Emp"  class="upload"/>
+							
 						</div>
 					</div>
 
@@ -89,13 +94,16 @@
 
 						</div>
 					</div>
-				</form>
 
-			</div>
-			<div class="modal-footer ">
-				<div class="mx-auto">
-					<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fas fa-window-close"></i> <strong>Cerrar</strong></button>
-					<button type="button" id="btn_guardar_emp" onclick="guardarEmp()" class="btn btn-warning btn-sm"><i class="far fa-save"></i> <strong>Guardar</strong></button>
+
+				</div>
+				<div class="modal-footer ">
+					<div class="mx-auto">
+						<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fas fa-window-close"></i> <strong>Cerrar</strong></button>
+						<button type="button" id="btn_guardar_emp" name="btn_guardar_emp" class="btn btn-warning btn-sm"><i class="far fa-save"></i> <strong>Guardar</strong></button>
+						
+					</form>
+
 				</div>
 			</div>
 		</div>
@@ -254,3 +262,5 @@
 	</div>
 </div>
 <!-- Modal Editar Empleado -->
+</body>
+</html>
