@@ -1,3 +1,78 @@
+$( document ).ready(function() {
+  $('#buscarVT').focus();
+  $(mostrarDatosEmp());
+});
+
+
+function mostrarDatosEmp(consulta,consulta2){
+  $.ajax({
+    url: "../Vistas/Tablas/tbl_empleados.php",
+    type: "POST",
+    dataType:"html",
+    data:{consulta: consulta, consulta2:consulta2},
+    success: function(r){
+      $('#tblEmpleados').html(r);
+
+    }
+
+  });
+}
+
+$( document ).ready(function() {
+  $("#btnBuscEmp").click(function(e){
+    e.preventDefault();
+    var valor = $('#buscarVT').val();
+    var valor2 = $('#estadoEmpDep').val();
+    
+
+      if (valor != "" || valor2 != "") {
+      mostrarDatosEmp(valor,valor2);
+    }else{
+      mostrarDatosEmp();
+    }
+  });
+
+});
+
+// Mascara para los telefonos
+jQuery(function($){
+     $("#telefono_emp").mask("999-999-9999");
+     $('#telefono_empU').mask("999-999-9999");
+})
+
+// Cargamos los datos para mostrarlo en el modal Editar
+function agregaEmpParaEdicion(idu){ 
+  $.ajax({
+    async: true,
+    type: "POST",
+    data: "idu=" + idu,
+    url: "../Procesos/Empleados/CargarEmp.php",
+    success: function (r){
+      datos=jQuery.parseJSON(r);
+      $("#fotoEmp").attr("src", "../Imagenes/Empleados/"+datos[0]);
+      $('#idEmp').val(datos[1]);
+      $('#nombre_empU').val(datos[2]);
+      $('#apellido_empU').val(datos[3]);
+      $('#select_dep_empU').val(datos[4]);
+      $('#correo_empU').val(datos[5]);
+      $('#direccion_empU').val(datos[6]);
+      $('#select_emp_generoU').val(datos[7]);
+      $('#posicion_empU').val(datos[8]);
+      $('#telefono_empU').val(datos[9]);
+      $('#fecha_nac_empU').val(datos[10]);
+      $('#fecha_cre_empU').val(datos[11]);
+      $('#horaCre').val(datos[12]);
+      $('#usuCre').val(datos[13]);
+      $('#usuMod').val(datos[14]);
+      $('#fecha_mod_empU').val(datos[15]);
+      $('#horaMod').val(datos[16]);
+      $('#estado_emp').val(datos[17]);
+    }
+  });
+
+}
+
+
 //Agregar Empleado
 $(document).ready(function() {
   if (window.File && window.FileList && window.FileReader) {
@@ -43,6 +118,7 @@ $(document).ready(function() {
   if (window.File && window.FileList && window.FileReader) {
     $("#file-upload-Editar-Emp").on("change", function(e) {
       $("#file-upload-Editar-Emp").prop('disabled', true);
+      $("#fotoEmp").hide();
       var files = e.target.files,
       filesLength = files.length;
 
@@ -61,6 +137,7 @@ $(document).ready(function() {
             $(this).parent(".pip-Editar-Emp").remove();
             $("#file-upload-Editar-Emp").val('');
             $("#file-upload-Editar-Emp").prop('disabled', false);
+            $("#fotoEmp").show();
           });
           
         });
@@ -79,9 +156,13 @@ $(document).ready(function() {
 
 
 
+
+// Guardar Empleados
 $(document).ready(function(){ 
+
   $('#btn_guardar_emp').click(function(e){
     e.preventDefault();
+
     if ($('#nombre_emp').val()=="") {
       swal("Por Favor!", "Debe agregar un nombre de categoria!","error");
       return false;
@@ -128,7 +209,6 @@ $(document).ready(function(){
       processData: false,
       success: function(data){
         $('#frmAgregaEmp')[0].reset();
-        $(this).parent(".pip-Emp").remove();
         console.log("success");
       },
       error: function(jqXHR, textStatus, errorThrown) {
@@ -139,3 +219,4 @@ $(document).ready(function(){
   });
 
 });
+// Guardar Empleados

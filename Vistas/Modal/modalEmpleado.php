@@ -122,17 +122,18 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<form>
+				<form enctype="multipart/form-data" id="frmEditarEmp">
 
 					<div class="text-center">
 						<label><strong>Foto</strong></label>
 						<div class="fileUpload btn btn-secondary btn-sm" >
 							<span>Examinar... <i class="fas fa-cloud-upload-alt"></i></span>
-							<input type="file" class="upload"id="file-upload-Editar-Emp" />
+							<input type="file" class="upload" id="file-upload-Editar-Emp" />
 						</div>
 					</div>
 
 					<div class="text-center" id="file-preview-zone-Editar-Emp">
+						<img id="fotoEmp" class="rounded-circle"  width="150" height="150" src="">
 
 					</div>
 
@@ -140,27 +141,22 @@
 						<div class="col">
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Identificador Empleado:</strong></label>
-								<input type="text" disabled="" class="form-control form-control-sm" placeholder="Identificador Empleado">
-							</div>
-
-							<div class="col-sm-10 mx-auto">
-								<label><strong>Nombre Usuario:</strong></label>
-								<input type="text" class="form-control form-control-sm" placeholder="Nombre Usuario">
+								<input type="text" id="idEmp" disabled="" class="form-control form-control-sm" placeholder="Identificador Empleado">
 							</div>
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Nombre:</strong></label>
-								<input type="text" class="form-control form-control-sm" placeholder="Nombre">
+								<input type="text" id="nombre_empU" name="nombre_empU" class="form-control form-control-sm" placeholder="Nombre">
 							</div>
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Apellido:</strong></label>
-								<input type="text" class="form-control form-control-sm" placeholder="Apellido">
+								<input type="text" id="apellido_empU" name="apellido_empU" class="form-control form-control-sm" placeholder="Apellido">
 							</div>
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Departamento:</strong></label>
-								<select class="form-control form-control-sm" id="exampleFormControlSelect1">
+								<select class="form-control form-control-sm" id="select_dep_empU" name="select_dep_empU">
 									<option selected>-Seleccione-</option>
 									<option>Dirección</option>
 									<option>Contabilidad y Adm</option>
@@ -172,17 +168,17 @@
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Correo Electrónico:</strong></label>
-								<input type="text" class="form-control form-control-sm" placeholder="Correo Electrónico">
+								<input type="text" id="correo_empU" name="correo_empU" class="form-control form-control-sm" placeholder="Correo Electrónico">
 							</div>
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Dirección:</strong></label>
-								<input type="text" class="form-control form-control-sm" placeholder="Dirección">
+								<input type="text" id="direccion_empU" name="direccion_empU" class="form-control form-control-sm" placeholder="Dirección">
 							</div>
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Género:</strong></label>
-								<select class="form-control form-control-sm" id="exampleFormControlSelect1">
+								<select class="form-control form-control-sm" id="select_emp_generoU" name="select_emp_generoU">
 									<option selected>-Seleccione-</option>
 									<option>Masculino</option>
 									<option>Femenino</option>
@@ -191,7 +187,12 @@
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Posición:</strong></label>
-								<input type="text" class="form-control form-control-sm" placeholder="Posición">
+								<input type="text" id="posicion_empU" name="posicion_empU" class="form-control form-control-sm" placeholder="Posición">
+							</div>
+
+							<div class="col-sm-10 mx-auto">
+								<label><strong>Teléfono:</strong></label>
+								<input type="text" id="telefono_empU" name="telefono_empU"  class="form-control form-control-sm" placeholder="Teléfono">
 							</div>
 
 						</div>
@@ -199,48 +200,43 @@
 						<div class="col">
 
 							<div class="col-sm-10 mx-auto">
-								<label><strong>Teléfono:</strong></label>
-								<input type="text" class="form-control form-control-sm" placeholder="Teléfono">
-							</div>
-
-							<div class="col-sm-10 mx-auto">
 								<label><strong>Fecha Nacimiento:</strong></label>
-								<input type="date" class="form-control form-control-sm" placeholder="Fecha Nacimiento">
+								<input type="date" id="fecha_nac_empU" name="fecha_nac_empU" class="form-control form-control-sm" placeholder="Fecha Nacimiento">
 							</div>
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Fecha Creación:</strong></label>
-								<input type="date" disabled="" class="form-control form-control-sm" placeholder="Fecha Creación">
+								<input type="date" id="fecha_cre_empU" name="fecha_cre_empU" disabled="" class="form-control form-control-sm" placeholder="Fecha Creación">
 							</div>
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Hora Creación:</strong></label>
-								<input type="text" disabled="" class="form-control form-control-sm" placeholder="Hora Creación">
+								<input type="text" id="horaCre" name="horaCre" disabled="" class="form-control form-control-sm" placeholder="Hora Creación">
 							</div>
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Usuario Creador:</strong></label>
-								<input type="text" disabled="" class="form-control form-control-sm" placeholder="Usuario Creador">
+								<input type="text" id="usuCre" name="usuCre" disabled="" class="form-control form-control-sm" placeholder="Usuario Creador">
 							</div>
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Usuario Modificador:</strong></label>
-								<input type="text" disabled="" class="form-control form-control-sm" placeholder="Usuario Modificador">
+								<input type="text" id="usuMod" name="usuMod" disabled="" class="form-control form-control-sm" placeholder="Usuario Modificador">
 							</div>
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Fecha Modificación:</strong></label>
-								<input type="text" disabled="" class="form-control form-control-sm" placeholder="Fecha Modificación">
+								<input type="text" id="fecha_mod_empU" name="fecha_mod_empU" disabled="" class="form-control form-control-sm" placeholder="Fecha Modificación">
 							</div>
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Hora Modificación:</strong></label>
-								<input type="text" disabled="" class="form-control form-control-sm" placeholder="Hora Modificación">
+								<input type="text" id="horaMod" name="horaMod" disabled="" class="form-control form-control-sm" placeholder="Hora Modificación">
 							</div>
 
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Estado:</strong></label>
-								<select class="form-control form-control-sm" id="exampleFormControlSelect1">
+								<select class="form-control form-control-sm" id="estado_emp" name="estado_emp">
 									<option selected>-Seleccione-</option>
 									<option>Activo</option>
 									<option>Inactivo</option>

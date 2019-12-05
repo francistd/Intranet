@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS `Intranet` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci;
+CREATE DATABASE IF NOT EXISTS `intranet` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci;
 
-use `Intranet`;
+use `intranet`;
 
 /*Creamos la tabla usuarios*/
 CREATE TABLE IF NOT EXISTS `tbl_usuarios` (
@@ -42,6 +42,7 @@ CREATE TABLE IF NOT EXISTS `tbl_empleados` (
 	`fecha_mod` date DEFAULT NULL,
 	`hora_mod` time NULL,
 	`activo` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL,
+	`estado_emp` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
 	PRIMARY KEY (`id_emp`),
 	UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
@@ -50,7 +51,6 @@ CREATE TABLE IF NOT EXISTS `tbl_empleados` (
 /*Creamos la tabla departamento*/
 CREATE TABLE IF NOT EXISTS `tbl_departamento` (
 	`id_dep` int(10) NOT NULL AUTO_INCREMENT,
-	`id_emp` int(10),
 	`nombre_dep` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
 	`fecha_crea_dep` date DEFAULT NULL,
 	`hora` time NULL,

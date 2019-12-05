@@ -23,6 +23,7 @@ $usu_mod = "N/A";
 $fecha_mod = "0000-00-00";
 $hora_mod = "00:00";
 $estado = "Si";
+$estadoEmp = "Activo";
 
 
 $datos = array(
@@ -41,7 +42,8 @@ $datos = array(
 	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $usu_mod), ENT_QUOTES | ENT_HTML401, "UTF-8")),
 	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $fecha_mod), ENT_QUOTES | ENT_HTML401, "UTF-8")),
 	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $hora_mod), ENT_QUOTES | ENT_HTML401, "UTF-8")),
-	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $estado), ENT_QUOTES | ENT_HTML401, "UTF-8"))
+	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $estado), ENT_QUOTES | ENT_HTML401, "UTF-8")),
+	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $estadoEmp), ENT_QUOTES | ENT_HTML401, "UTF-8"))
 );
 
 
@@ -61,10 +63,11 @@ usu_cre,
 usu_mod,
 fecha_mod,
 hora_mod,
-activo)
-values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+activo,
+estado_emp)
+values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 $stmt=$con->prepare($sql);
-$stmt->bind_param('ssisssssssssssss',
+$stmt->bind_param('ssissssssssssssss',
 	$datos[0],
 	$datos[1],
 	$datos[2],
@@ -80,7 +83,8 @@ $stmt->bind_param('ssisssssssssssss',
 	$datos[12],
 	$datos[13],
 	$datos[14],
-	$datos[15]);
+	$datos[15],
+	$datos[16]);
 
 echo $stmt->execute();
 $ultimoID = 0;

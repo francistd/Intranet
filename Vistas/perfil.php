@@ -15,10 +15,10 @@
 				<!-- Prueba -->
 				<div class="rounded" style="background: url(../Imagenes/perfil.png); margin-bottom: 5px" >
 					<div class="text-center" style="margin-top: 5px">
-						<img src="../Imagenes/log.jpg" class=" perfil rounded-circle" width="200" height="200">
+						<img src="<?php echo '../Imagenes/'.$_SESSION['foto'];  ?>" class=" perfil rounded-circle" width="150" height="150">
 					</div>
 					<div class="text-center">
-						<button class="Edita btn btn-success btn-sm" data-toggle="modal" data-target="#AgregaFotoPerfil" style="margin-bottom: 10px; margin-top: 10px">Foto... <i class="fas fa-external-link-alt"></i></button>
+						<!-- <button class="Edita btn btn-success btn-sm" data-toggle="modal" data-target="#AgregaFotoPerfil" style="margin-bottom: 10px; margin-top: 10px">Foto... <i class="fas fa-external-link-alt"></i></button> -->
 					</div>
 				</div>
 

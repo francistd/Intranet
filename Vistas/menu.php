@@ -139,7 +139,7 @@
 				</li>
 				<li class="nav-item avatar">
 					<a class="nav-link p-0" href="#">
-						<img src="../Imagenes/log.jpg" class="rounded-circle z-depth-0" alt="avatar image" height="45">
+						<img src="<?php echo '../Imagenes/'.$_SESSION['foto'];  ?>" class="rounded-circle z-depth-0" alt="avatar image" height="45">
 					</a>
 				</li>
 			</ul>

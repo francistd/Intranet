@@ -20,6 +20,10 @@ Login
 
 SELECT Usu.id_usu, Usu.id_emp, Usu.user_name, Usu.pass, Emp.id_emp, Emp.nombre, Emp.apellido FROM `tbl_usuarios` as Usu INNER JOIN tbl_empleados as Emp on Usu.id_emp = Emp.id_emp WHERE Usu.user_name = 'tavarezju' and Usu.pass = 'ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f'
 --------------------------------------------------------------------------------------------------------------------------
+Buscar empleados con foto 
+
+SELECT F.nombre_img, Emp.nombre, Emp.apellido,Dep.nombre_dep,Emp.email,Emp.cargo,Emp.telefono,Emp.usu_cre,Emp.estado_emp FROM tbl_imagenes as F INNER JOIN tbl_empleados as Emp on F.id_emp = Emp.id_emp INNER JOIN tbl_departamento as Dep on Emp.id_dep = Dep.id_dep ORDER BY Emp.id_emp ASC LIMIT 4
+---------------------------------------------------------------------------------------------------------------------------
 
 
 https://victorroblesweb.es/2013/11/11/la-extension-mysqli-en-php/ 

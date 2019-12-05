@@ -24,6 +24,7 @@
 <script src="../Librerias/bootstrap-4.3.1/js/bootstrap.bundle.min.js"></script>
 <script src="../Librerias/bootstrap-4.3.1/js/bootstrap.js"></script>
 <script src="../Librerias/sweetalert.min.js"></script>
+<script src="../Librerias/JqueryMask/inputMask.js"></script>
 <script src="../JS/menu.js"></script>
 <script src="../JS/noticias.js"></script>
 <script src="../JS/departamento.js"></script>
