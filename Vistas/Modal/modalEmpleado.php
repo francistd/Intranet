@@ -128,12 +128,12 @@
 						<label><strong>Foto</strong></label>
 						<div class="fileUpload btn btn-secondary btn-sm" >
 							<span>Examinar... <i class="fas fa-cloud-upload-alt"></i></span>
-							<input type="file" class="upload" id="file-upload-Editar-Emp" />
+							<input type="file" class="upload" id="file-upload-Editar-Emp" name="file-upload-Editar-Emp" />
 						</div>
 					</div>
 
 					<div class="text-center" id="file-preview-zone-Editar-Emp">
-						<img id="fotoEmp" class="rounded-circle"  width="150" height="150" src="">
+						<img id="fotoEmp" name="fotoEmp" class="rounded-circle"  width="150" height="150" src="">
 
 					</div>
 
@@ -141,7 +141,7 @@
 						<div class="col">
 							<div class="col-sm-10 mx-auto">
 								<label><strong>Identificador Empleado:</strong></label>
-								<input type="text" id="idEmp" disabled="" class="form-control form-control-sm" placeholder="Identificador Empleado">
+								<input type="text" id="idEmpU" name="idEmpU" readonly="" class="form-control form-control-sm" placeholder="Identificador Empleado">
 							</div>
 
 							<div class="col-sm-10 mx-auto">
@@ -158,11 +158,11 @@
 								<label><strong>Departamento:</strong></label>
 								<select class="form-control form-control-sm" id="select_dep_empU" name="select_dep_empU">
 									<option selected>-Seleccione-</option>
-									<option>Dirección</option>
-									<option>Contabilidad y Adm</option>
-									<option>Creditos y Cobros</option>
-									<option>Tecnología</option>
-									<option>Capacitación</option>
+									<option value="5">Dirección</option>
+									<option value="2">Contabilidad y Adm</option>
+									<option value="3">Creditos y Cobros</option>
+									<option value="1">Tecnología</option>
+									<option value="4">Capacitación</option>
 								</select>
 							</div>
 
@@ -251,7 +251,7 @@
 			<div class="modal-footer ">
 				<div class="mx-auto">
 					<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fas fa-window-close"></i> <strong>Cerrar</strong></button>
-					<button type="button" class="btn btn-warning btn-sm"><i class="far fa-save"></i> <strong>Guardar</strong></button>
+					<button type="button" id="btn_actualizar_emp" name="btn_actualizar_emp" class="btn btn-warning btn-sm"><i class="far fa-save"></i> <strong>Guardar</strong></button>
 				</div>
 			</div>
 		</div>
