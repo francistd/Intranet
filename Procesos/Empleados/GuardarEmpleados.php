@@ -6,6 +6,11 @@ session_start();
 date_default_timezone_set("America/Santo_Domingo");
 $time = time();
 
+$rutaAlamacenamiento = $_FILES['file-upload-Emp']['tmp_name'];
+$nomImagen = $_FILES['file-upload-Emp']['name'];
+$carpeta='../../Imagenes/Empleados/';
+$rutafinal = $carpeta.$nomImagen;
+move_uploaded_file($rutaAlamacenamiento,$rutafinal);
 
 $nom =$_POST['nombre_emp'];
 $ape = $_POST['apellido_emp'];
@@ -26,9 +31,12 @@ $estado = "Si";
 $estadoEmp = "Activo";
 
 
+
+
 $datos = array(
 	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $nom), ENT_QUOTES | ENT_HTML401, "UTF-8")),
 	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $ape), ENT_QUOTES | ENT_HTML401, "UTF-8")),
+	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $nomImagen), ENT_QUOTES | ENT_HTML401, "UTF-8")),
 	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $dep_emp), ENT_QUOTES | ENT_HTML401, "UTF-8")),
 	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $email), ENT_QUOTES | ENT_HTML401, "UTF-8")),
 	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $direccion), ENT_QUOTES | ENT_HTML401, "UTF-8")),
@@ -46,11 +54,10 @@ $datos = array(
 	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $estadoEmp), ENT_QUOTES | ENT_HTML401, "UTF-8"))
 );
 
-
-
 $sql="INSERT into tbl_empleados (nombre,
 apellido,
-id_dep,
+nom_img,
+nom_dep,
 email,
 direccion,
 genero,
@@ -65,9 +72,9 @@ fecha_mod,
 hora_mod,
 activo,
 estado_emp)
-values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 $stmt=$con->prepare($sql);
-$stmt->bind_param('ssissssssssssssss',
+$stmt->bind_param('ssssssssssssssssss',
 	$datos[0],
 	$datos[1],
 	$datos[2],
@@ -84,73 +91,12 @@ $stmt->bind_param('ssissssssssssssss',
 	$datos[13],
 	$datos[14],
 	$datos[15],
-	$datos[16]);
+	$datos[16],
+	$datos[17]);
 
 echo $stmt->execute();
-$ultimoID = 0;
-$ultimoID = mysqli_insert_id($con);
 $stmt->close();
-
-
-// Second Insert
-
-$id_usu_img = 0;
-
-
-$rutaAlamacenamiento = $_FILES['file-upload-Emp']['tmp_name'];
-$nom = $_FILES['file-upload-Emp']['name'];
-$carpeta='../../Imagenes/Empleados/';
-$rutafinal = $carpeta.$nom;
-move_uploaded_file($rutaAlamacenamiento,$rutafinal);
-
-$fecha_subida_img = date('Y-m-d');
-$fecha_mod_img = "0000-00-00";
-$usu_cre_img = $_SESSION['usuario'];
-$usu_mod_img = "N/A";
-$activo_img = "Si";
-
-$datos2 = array(
-	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $id_usu_img), ENT_QUOTES | ENT_HTML401, "UTF-8")),
-	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $ultimoID), ENT_QUOTES | ENT_HTML401, "UTF-8")),
-	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $nom), ENT_QUOTES | ENT_HTML401, "UTF-8")),
-	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $carpeta), ENT_QUOTES | ENT_HTML401, "UTF-8")),
-	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $fecha_subida_img), ENT_QUOTES | ENT_HTML401, "UTF-8")),
-	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $fecha_mod_img), ENT_QUOTES | ENT_HTML401, "UTF-8")),
-	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $usu_cre_img), ENT_QUOTES | ENT_HTML401, "UTF-8")),
-	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $usu_mod_img), ENT_QUOTES | ENT_HTML401, "UTF-8")),
-	$con->real_escape_string(html_entity_decode(str_replace("\r\n", '', $activo_img), ENT_QUOTES | ENT_HTML401, "UTF-8")),
-);
-
-
-$sql = "INSERT into tbl_imagenes (id_usu,
-id_emp,
-nombre_img,
-ruta,
-fecha_Subida,
-fecha_mod_img,
-usu_crea,
-usu_mod,
-activo) values (?,?,?,?,?,?,?,?,?)";
-$stmt=$con->prepare($sql);
-$stmt->bind_param('iisssssss',
-	$datos2[0],
-	$datos2[1],
-	$datos2[2],
-	$datos2[3],
-	$datos2[4],
-	$datos2[5],
-	$datos2[6],
-	$datos2[7],
-	$datos2[8]);
-
-echo $stmt->execute();
-
-$stmt->close();
-
 $con->close();
-
-
-
 
 ?>
 

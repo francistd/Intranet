@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS `intranet` DEFAULT CHARACTER SET utf8mb4 COLLATE u
 
 use `intranet`;
 
-/*Creamos la tabla usuarios*/
+/*(#1) Creamos la tabla usuarios*/
 CREATE TABLE IF NOT EXISTS `tbl_usuarios` (
 	`id_usu` int(10) NOT NULL AUTO_INCREMENT,
 	`id_emp` int(10),
@@ -11,11 +11,11 @@ CREATE TABLE IF NOT EXISTS `tbl_usuarios` (
 	`pass` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
 	`tipo_usu` varchar(60) COLLATE utf8_unicode_ci DEFAULT NULL,
 	`fecha_crea` date DEFAULT NULL,
-	`hora` time NULL,
+	`hora` varchar(20) NULL,
 	`fecha_mod` date DEFAULT NULL,
 	`usu_cre` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
 	`usu_mod` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
-	`hora_mod` time NULL,
+	`hora_mod` varchar(20) NULL,
 	`estado_usu` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
 	`activo` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL,
 	PRIMARY KEY (`id_usu`),
@@ -23,12 +23,13 @@ CREATE TABLE IF NOT EXISTS `tbl_usuarios` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 
-/*Creamos la tabla empleados*/
+/*(#2) Creamos la tabla empleados*/
 CREATE TABLE IF NOT EXISTS `tbl_empleados` (
 	`id_emp` int(10) NOT NULL AUTO_INCREMENT,
 	`nombre` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
 	`apellido` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
-	`id_dep` int(10),
+	`nom_img` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+	`nom_dep` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
 	`email` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
 	`direccion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
 	`genero` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -40,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `tbl_empleados` (
 	`usu_cre` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
 	`usu_mod` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
 	`fecha_mod` date DEFAULT NULL,
-	`hora_mod` time NULL,
+	`hora_mod` varchar(20) NULL,
 	`activo` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL,
 	`estado_emp` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
 	PRIMARY KEY (`id_emp`),
@@ -53,11 +54,11 @@ CREATE TABLE IF NOT EXISTS `tbl_departamento` (
 	`id_dep` int(10) NOT NULL AUTO_INCREMENT,
 	`nombre_dep` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
 	`fecha_crea_dep` date DEFAULT NULL,
-	`hora` time NULL,
+	`hora` varchar(20) NULL,
 	`fecha_mod_dep` date DEFAULT NULL,
 	`usu_crea` varchar(25) COLLATE utf8_unicode_ci DEFAULT NULL,
 	`usu_mod` varchar(25) COLLATE utf8_unicode_ci DEFAULT NULL,
-	`hora_mod` time NULL,
+	`hora_mod` varchar(20) NULL,
 	`estado_dep` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
 	`activo` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL,
 	PRIMARY KEY (`id_dep`)

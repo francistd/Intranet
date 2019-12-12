@@ -5,7 +5,16 @@ $con = conexion();
 
 $salida ="";
 
-$query = "SELECT F.nombre_img, Emp.nombre, Emp.apellido,Dep.nombre_dep,Emp.email,Emp.cargo,Emp.telefono,Emp.usu_cre,Emp.estado_emp, Emp.id_emp FROM tbl_imagenes as F INNER JOIN tbl_empleados as Emp on F.id_emp = Emp.id_emp INNER JOIN tbl_departamento as Dep on Emp.id_dep = Dep.id_dep ORDER BY Emp.id_emp ASC LIMIT 4";
+$query = "SELECT nom_img,
+                 nombre,
+                 apellido,
+                 nom_dep,
+                 email,
+                 cargo,
+                 telefono,
+                 usu_cre,
+                 estado_emp,
+                 id_emp FROM tbl_empleados ORDER BY id_emp ASC LIMIT 4";
 
 mysqli_set_charset($con,"utf8");
 
@@ -14,7 +23,22 @@ if (isset($_POST['consulta'])) {
     $q= $con->real_escape_string($_POST['consulta']);
     $q2= $con->real_escape_string($_POST['consulta2']);
 
-    $query = "SELECT F.nombre_img, Emp.nombre, Emp.apellido,Dep.nombre_dep, Emp.email,Emp.cargo,Emp.telefono,Emp.usu_cre,Emp.estado_emp,Emp.id_emp FROM tbl_imagenes as F INNER JOIN tbl_empleados as Emp on F.id_emp = Emp.id_emp INNER JOIN tbl_departamento as Dep on Emp.id_dep = Dep.id_dep where ( Emp.nombre LIKE '%".$q."%' OR Emp.apellido LIKE '%".$q."%' ) AND Dep.nombre_dep LIKE '%".$q2."%'  ORDER BY Emp.id_emp ASC LIMIT 4";
+    $query = "SELECT nom_img,
+                     nombre,
+                     apellido,
+                     nom_dep,
+                     email,
+                     cargo,
+                     telefono,
+                     usu_cre,
+                     estado_emp,
+                     id_emp 
+                     FROM tbl_empleados 
+                     where 
+                     (nombre LIKE '%".$q."%' OR apellido LIKE '%".$q."%' )
+                     AND 
+                     nom_dep LIKE '%".$q2."%'  
+                     ORDER BY id_emp ASC LIMIT 4";
     
 }
 $resultado = $con->query($query);

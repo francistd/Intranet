@@ -19,15 +19,9 @@
 
 						<strong><i class="fas fa-filter"></i></strong>
 						<label>Departamento<select id="estadoEmpDep" name="estadoEmpDep" class=" form-control form-control-sm ">
-							<option value="">-Seleccione-</option>
-							<option>Dirección</option>
-							<option>Contabilidad y Adm</option>
-							<option>Creditos y Cobros</option>
-							<option>Tecnología</option>
-							<option>Capacitación</option>
 						</select></label>
 
-						<label><button id="btnBuscEmp" class="buscar_emp btn btn-secondary btn-sm "><i class="fas fa-search"></i> Buscar</button></label>
+						<button type="button" id="btnBuscEmp" class="buscar_emp btn btn-secondary btn-sm "><i class="fas fa-search"></i> Buscar</button>
 					</div>
 				</div>
 				<!-- Prueba -->

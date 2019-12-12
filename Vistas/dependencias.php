@@ -11,10 +11,12 @@
 <link rel="stylesheet" type="text/css" href="../CSS/navBarLogin.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../Librerias/bootstrap-4.3.1/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../Librerias/fontawesome-free/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="../Librerias/select2/dist/css/select2.css">
 
 
 <!-- load jQuery 3.3.1 -->
 <script src="../Librerias/jquery-3.3.1.min.js"></script>
+<script src="../Librerias/select2/dist/js/select2.js"></script>
 <script src="../Librerias/moment.min.js"></script>
 <!-- <script type="text/javascript">
 	var jQuery_3_3_1 = $.noConflict(true);
@@ -38,3 +40,5 @@
 <script src="../JS/perfil.js"></script>
 <script src="../JS/publicacion.js"></script>
 <script src="../JS/usuarios.js"></script>
+<script src="../JS/selectDepartamento.js"></script>
+<script src="../JS/selectEmp.js"></script>

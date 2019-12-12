@@ -78,3 +78,24 @@ $(document).ready(function() {
 
 
 
+$( document ).ready(function() {
+
+  $('#dep_crea_usu').select2({
+
+    placeholder: 'Seleccione un Departamento',
+
+    ajax: {
+      url: '../Vistas/Selects/selectIdDep.php',
+      dataType: 'json',
+      delay: 250,
+      processResults: function (data) {
+        // console.log(data);
+        return {
+          results: data
+        };
+      },
+      cache: true
+    }
+  });
+
+});

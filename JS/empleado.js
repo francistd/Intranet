@@ -25,7 +25,7 @@ $( document ).ready(function() {
     var valor2 = $('#estadoEmpDep').val();
     
 
-      if (valor != "" || valor2 != "") {
+    if (valor != "" || valor2 != "") {
       mostrarDatosEmp(valor,valor2);
     }else{
       mostrarDatosEmp();
@@ -36,8 +36,8 @@ $( document ).ready(function() {
 
 // Mascara para los telefonos
 jQuery(function($){
-     $("#telefono_emp").mask("999-999-9999");
-     $('#telefono_empU').mask("999-999-9999");
+ $("#telefono_emp").mask("999-999-9999");
+ $('#telefono_empU').mask("999-999-9999");
 })
 
 // Cargamos los datos para mostrarlo en el modal Editar
@@ -160,16 +160,57 @@ $(document).ready(function() {
 // Guardar Empleados
 $(document).ready(function(){ 
 
+
   $('#btn_guardar_emp').click(function(e){
     e.preventDefault();
 
-    if ($('#nombre_emp').val()=="") {
-      swal("Por Favor!", "Debe agregar un nombre de categoria!","error");
+    if ($('#file-upload-Emp').val()=="") {
+      swal("Por Favor!", "Debe agregar una fotografia!","error");
       return false;
     }
 
-    if ($('#file-upload-Emp').val()=="") {
-      swal("Por Favor!", "Debe agregar un nombre de categoria!","error");
+    if ($('#nombre_emp').val()=="") {
+      swal("Por Favor!", "Debe agregar un nombre!","error");
+      return false;
+    }
+
+    if ($('#apellido_emp').val()=="") {
+      swal("Por Favor!", "Debe agregar un apellido!","error");
+      return false;
+    }
+
+    if ($('#select_dep_emp').val()=="") {
+      swal("Por Favor!", "Debe agregar un departamento!","error");
+      return false;
+    }
+
+    if ($('#correo_emp').val()=="") {
+      swal("Por Favor!", "Debe agregar un correo electrónico!","error");
+      return false;
+    }
+
+    if ($('#direccion_emp').val()=="") {
+      swal("Por Favor!", "Debe agregar una dirección!","error");
+      return false;
+    }
+
+    if ($('#select_emp_genero').val()=="") {
+      swal("Por Favor!", "Debe agregar un género!","error");
+      return false;
+    }
+
+    if ($('#posicion_emp').val()=="") {
+      swal("Por Favor!", "Debe agregar una posición!","error");
+      return false;
+    }
+
+    if ($('#telefono_emp').val()=="") {
+      swal("Por Favor!", "Debe agregar un teléfono!","error");
+      return false;
+    }
+
+    if ($('#fecha_nac_emp').val()=="") {
+      swal("Por Favor!", "Debe agregar una fecha de nacimiento!","error");
       return false;
     }
 
@@ -209,12 +250,14 @@ $(document).ready(function(){
       processData: false,
       success: function(data){
         $('#frmAgregaEmp')[0].reset();
-        console.log("success");
+        swal("Guardado","Con Exito","success");
+
       },
       error: function(jqXHR, textStatus, errorThrown) {
-       console.log(textStatus, errorThrown);
+        swal("Fallo al Guardar","error","error");
+        console.log(jqXHR);
      }
-    });
+   });
     //Primer Ajax
   });
 
@@ -224,79 +267,163 @@ $(document).ready(function(){
 // Actualizar Empleados
 $(document).ready(function(){ 
 
-  $('#btn_actualizar_emp').click(function(e){
-    e.preventDefault();
+ $('#btn_actualizar_emp').click(function(e){
+  e.preventDefault();
 
-    if ($('#nombre_empU').val()=="") {
-      swal("Por Favor!", "Debe agregar un nombre de categoria!","error");
-      return false;
-    }
+  if ($('#nombre_empU').val()=="") {
+    swal("Por Favor!", "Debe agregar un nombre!","error");
+    return false;
+  }
 
-    if ($('#select_dep_empU').val()=="") {
-      swal("Por Favor!", "Debe agregar un departamento!","error");
-      return false;
-    }
+  if ($('#apellido_empU').val()=="") {
+    swal("Por Favor!", "Debe agregar un apellido!","error");
+    return false;
+  }
 
-    if ($('#file-upload-Editar-Emp').val()=="") {
-      swal("Por Favor!", "Debe agregar un nombre de categoria!","error");
-      return false;
-    }
+  if ($('#select_dep_empU').val()=="") {
+    swal("Por Favor!", "Debe agregar un departamento!","error");
+    return false;
+  }
+
+  if ($('#correo_empU').val()=="") {
+    swal("Por Favor!", "Debe agregar un correo electrónico!","error");
+    return false;
+  }
+
+  if ($('#direccion_empU').val()=="") {
+    swal("Por Favor!", "Debe agregar una dirección!","error");
+    return false;
+  }
+
+  if ($('#select_emp_generoU').val()==="") {
+    swal("Por Favor!", "Debe agregar un género!","error");
+    return false;
+  }
+
+  if ($('#posicion_empU').val()=="") {
+    swal("Por Favor!", "Debe agregar una posición!","error");
+    return false;
+  }
+
+  if ($('#telefono_empU').val()=="") {
+    swal("Por Favor!", "Debe agregar un teléfono!","error");
+    return false;
+  }
+
+  if ($('#fecha_nac_empU').val()=="") {
+    swal("Por Favor!", "Debe agregar una fecha de nacimiento!","error");
+    return false;
+  }
+
+  if ($('#estado_emp').val()=="") {
+    swal("Por Favor!", "Debe agregar un estado!","error");
+    return false;
+  }
+
+  if ($('#file-upload-Editar-Emp').val() !=="") {
+
+      //Primer Ajax
+      var inputFileImageEdit = document.getElementById("file-upload-Editar-Emp");
+      var inputidEmpleadoEdit = document.getElementById("idEmpU").value;
+      var inputnom_Edit = document.getElementById("nombre_empU").value;
+      var inputape_Edit = document.getElementById("apellido_empU").value;
+      var inputdepartamento_Edit = document.getElementById("select_dep_empU").value;
+      var inputcorre_Edit = document.getElementById("correo_empU").value;
+      var inputdireccion_Edit = document.getElementById("direccion_empU").value;
+      var inputgenero_Edit = document.getElementById("select_emp_generoU").value;
+      var inputposicion_Edit = document.getElementById("posicion_empU").value;
+      var inputtel_Edit = document.getElementById("telefono_empU").value;
+      var inputfecha_nac_Edit = document.getElementById("fecha_nac_empU").value;
+      var inputestado_Edit = document.getElementById("estado_emp").value;
 
 
+      var fileEdit = inputFileImageEdit.files[0];
+      var formdataEdit = new FormData();
+      formdataEdit.append('file-upload-Editar-Emp',fileEdit);
+      formdataEdit.append('idEmpU',inputidEmpleadoEdit);
+      formdataEdit.append('nombre_empU',inputnom_Edit);
+      formdataEdit.append('apellido_empU',inputape_Edit);
+      formdataEdit.append('select_dep_empU',inputdepartamento_Edit);
+      formdataEdit.append('correo_empU',inputcorre_Edit );
+      formdataEdit.append('direccion_empU',inputdireccion_Edit);
+      formdataEdit.append('select_emp_generoU',inputgenero_Edit);
+      formdataEdit.append('posicion_empU',inputposicion_Edit);
+      formdataEdit.append('telefono_empU',inputtel_Edit);
+      formdataEdit.append('fecha_nac_empU',inputfecha_nac_Edit);
+      formdataEdit.append('estado_emp',inputestado_Edit);
+
+
+      $.ajax({
+        url: "../Procesos/Empleados/ActualizarEmp.php",
+        type: "post",
+        dataType: "html",
+        data: formdataEdit,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(data){
+          swal("Actualizado","Con Exito","success");
+          console.log(data);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+         swal("Fallo al Actualizar","error","error");
+       }
+     });
     //Primer Ajax
-    var inputFileImageEdit = document.getElementById("file-upload-Editar-Emp");
-    var inputidEmpleadoEdit = document.getElementById("idEmpU").value;
-    var inputnom_Edit = document.getElementById("nombre_empU").value;
-    var inputape_Edit = document.getElementById("apellido_empU").value;
-    var inputdepartamento_Edit = document.getElementById("select_dep_empU").value;
-    var inputcorre_Edit = document.getElementById("correo_empU").value;
-    var inputdireccion_Edit = document.getElementById("direccion_empU").value;
-    var inputgenero_Edit = document.getElementById("select_emp_generoU").value;
-    var inputposicion_Edit = document.getElementById("posicion_empU").value;
-    var inputtel_Edit = document.getElementById("telefono_empU").value;
-    var inputfecha_nac_Edit = document.getElementById("fecha_nac_empU").value;
-    var inputestado_Edit = document.getElementById("estado_emp").value;
+
+
+  }else {
+
+
+      //Segundo Ajax
+      var inputidEmpleadoEdit = document.getElementById("idEmpU").value;
+      var inputnom_Edit = document.getElementById("nombre_empU").value;
+      var inputape_Edit = document.getElementById("apellido_empU").value;
+      var inputdepartamento_Edit = document.getElementById("select_dep_empU").value;
+      var inputcorre_Edit = document.getElementById("correo_empU").value;
+      var inputdireccion_Edit = document.getElementById("direccion_empU").value;
+      var inputgenero_Edit = document.getElementById("select_emp_generoU").value;
+      var inputposicion_Edit = document.getElementById("posicion_empU").value;
+      var inputtel_Edit = document.getElementById("telefono_empU").value;
+      var inputfecha_nac_Edit = document.getElementById("fecha_nac_empU").value;
+      var inputestado_Edit = document.getElementById("estado_emp").value;
+
+
+      var formdataEdit = new FormData();
+      formdataEdit.append('idEmpU',inputidEmpleadoEdit);
+      formdataEdit.append('nombre_empU',inputnom_Edit);
+      formdataEdit.append('apellido_empU',inputape_Edit);
+      formdataEdit.append('select_dep_empU',inputdepartamento_Edit);
+      formdataEdit.append('correo_empU',inputcorre_Edit );
+      formdataEdit.append('direccion_empU',inputdireccion_Edit);
+      formdataEdit.append('select_emp_generoU',inputgenero_Edit);
+      formdataEdit.append('posicion_empU',inputposicion_Edit);
+      formdataEdit.append('telefono_empU',inputtel_Edit);
+      formdataEdit.append('fecha_nac_empU',inputfecha_nac_Edit);
+      formdataEdit.append('estado_emp',inputestado_Edit);
+
+
+      $.ajax({
+        url: "../Procesos/Empleados/ActualizarEmp.php",
+        type: "post",
+        dataType: "html",
+        data: formdataEdit,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(data){
+          swal("Actualizado","Con Exito","success");
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+         swal("Fallo al Actualizar","error","error");
+       }
+     });
+    //Segundo Ajax.
+  }
 
 
 
-
-    var fileEdit = inputFileImageEdit.files[0];
-    var formdataEdit = new FormData();
-    formdataEdit.append('file-upload-Editar-Emp',fileEdit);
-    formdataEdit.append('idEmpU',inputidEmpleadoEdit);
-    formdataEdit.append('nombre_empU',inputnom_Edit);
-    formdataEdit.append('apellido_empU',inputape_Edit);
-    formdataEdit.append('select_dep_empU',inputdepartamento_Edit);
-    formdataEdit.append('correo_empU',inputcorre_Edit );
-    formdataEdit.append('direccion_empU',inputdireccion_Edit);
-    formdataEdit.append('select_emp_generoU',inputgenero_Edit);
-    formdataEdit.append('posicion_empU',inputposicion_Edit);
-    formdataEdit.append('telefono_empU',inputtel_Edit);
-    formdataEdit.append('fecha_nac_empU',inputfecha_nac_Edit);
-    formdataEdit.append('estado_emp',inputestado_Edit);
-
-    
-    $.ajax({
-      url: "../Procesos/Empleados/ActualizarEmp.php",
-      type: "post",
-      dataType: "html",
-      data: formdataEdit,
-      cache: false,
-      contentType: false,
-      processData: false,
-      success: function(data){
-        console.log("success");
-        console.log(data);
-      },
-      error: function(jqXHR, textStatus, errorThrown) {
-       console.log(textStatus, errorThrown);
-       alert(errorThrown);
-       alert(textStatus);
-       alert(jqXHR);
-     }
-    });
-    //Primer Ajax
-  });
+});
 
 });
 // Actualizar Empleados
