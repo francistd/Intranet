@@ -1,3 +1,8 @@
+$( document ).ready(function() {
+  $('#btnUsuCreaFiltro').focus();
+  $(mostrarDatosUsu());
+});
+
 $(document).ready(function(){
 
  $('#btnLoginn').click(function(e){
@@ -32,8 +37,68 @@ $(document).ready(function(){
 
 });
 
-//Comprobar Usuario Existente
+// Mostrar datos en Tabla
+function mostrarDatosUsu(consultaUsu,consultaUsu2){
+  $.ajax({
+    url: "../Vistas/Tablas/tbl_usuarios.php",
+    type: "POST",
+    dataType:"html",
+    data:{consultaUsu: consultaUsu, consultaUsu2:consultaUsu2},
+    success: function(r){
+      $('#tblUsuarios').html(r);
 
+    }
+    
+  });
+}
+// Mostrar datos en Tabla
+
+// Cargar Datos en modal Editar
+function agregaUsuParaEdicion(idu){ 
+  $.ajax({
+    async: true,
+    type: "POST",
+    data: "idu=" + idu,
+    url: "../Procesos/Usuarios/CargarUsu.php",
+    success: function (r){
+      datos=jQuery.parseJSON(r);
+      $('#ID_Cre_usu_editar').val(datos[0]);
+      $('#nom_Cre_usu_editar').val(datos[1]+' '+datos[2]);
+      $('#dep_Cre_usu_editar').val(datos[3]);
+      $('#usrName_Cre_usu_editar').val(datos[4]);
+      $('#tipoUsu_Cre_usu_editar').val(datos[5]);
+      $('#fecha_Cre_usu_editar').val(datos[6]);
+      $('#hora_Cre_usu_editar').val(datos[7]);
+      $('#fechaMod_Cre_usu_editar').val(datos[8]);
+      $('#usu_Cre_usu_editar').val(datos[9]);
+      $('#usuMod_Cre_usu_editar').val(datos[10]);
+      $('#horaMod_Cre_usu_editar').val(datos[11]);
+      $('#estado_Cre_usu_editar').val(datos[12]);
+    }
+  });
+
+}
+// Cargar Datos en modal Editar
+
+// Filtro Busqueda
+$( document ).ready(function() {
+  $("#btnUsuCreaFiltro").click(function(e){
+    e.preventDefault();
+    var valor = $('#buscarCreaUsu').val();
+    var valor2 = $('#SelectDepCreUsu').val();
+    
+
+    if (valor != "" || valor2 != "") {
+      mostrarDatosUsu(valor,valor2);
+    }else{
+      mostrarDatosUsu();
+    }
+  });
+
+});
+// Filtro Busqueda
+
+//Comprobar Usuario Existente
 $(document).ready(function(){ 
   $("#existe").hide();
   $("#noexiste").hide();
@@ -73,7 +138,6 @@ $(document).ready(function(){
 
   });
 });
-
 //Comprobar Usuario Existente
 
 
@@ -157,3 +221,91 @@ $(document).ready(function(){
 
 });
 // Guardar Usuario
+
+
+// Actualizar Usuarios
+$(document).ready(function(){ 
+
+ $('#btnEditarCrearUsuario').click(function(e){
+  e.preventDefault();
+
+  if ($('#ID_Cre_usu_editar').val()=="") {
+    swal("Por Favor!", "Identificador incorrecto!","error");
+    return false;
+  }
+
+  if ($('#tipoUsu_Cre_usu_editar').val()=="") {
+    swal("Por Favor!", "Debe seleccionar un tipo de usuario!","error");
+    return false;
+  }
+
+  if ($('#estado_Cre_usu_editar').val()=="") {
+    swal("Por Favor!", "Debe agregar un estado!","error");
+    return false;
+  }
+
+      //Primer Ajax
+      var inputidIdUsuEdit = document.getElementById("ID_Cre_usu_editar").value;
+      var inputnom_Edit = document.getElementById("tipoUsu_Cre_usu_editar").value;
+      var inputape_Edit = document.getElementById("estado_Cre_usu_editar").value;
+
+      var formdataUserEdit = new FormData();
+      formdataUserEdit.append('ID_Cre_usu_editar',inputidIdUsuEdit);
+      formdataUserEdit.append('tipoUsu_Cre_usu_editar',inputnom_Edit);
+      formdataUserEdit.append('estado_Cre_usu_editar',inputape_Edit);
+
+      $.ajax({
+        url: "../Procesos/Usuarios/ActualizarUsu.php",
+        type: "post",
+        dataType: "html",
+        data: formdataUserEdit,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(data){
+          swal("Actualizado","Con Exito","success");
+          console.log(data);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+         swal("Fallo al Actualizar","error","error");
+       }
+     });
+    //Primer Ajax
+
+
+});
+
+});
+// Actualizar Usuarios
+
+
+// Eliminar Usuario
+function eliminarDatosUsu(id_usu){
+  swal({
+    title: "Deseas Eliminar este Registro?",
+    text: "Una vez Eliminado no podra ser Recuperado!",
+    icon: "warning",
+    buttons: true,
+    dangerMode: true,
+  })
+  .then((willDelete) => {
+    if (willDelete) {
+      $.ajax({
+        type: "POST",
+        data: "id_usu=" + id_usu,
+        url: "../Procesos/Usuarios/BorrarUsuario.php",
+        success: function (r){
+          if (r==1) {
+            console.log(r);
+            mostrarDatosUsu();
+            swal("Eliminado","Con Exito","success");
+          }else{
+            swal("Fallo al Eliminar");
+            console.log(r);
+          }
+        }
+      });
+    } 
+  });
+}
+// Eliminar Usuario

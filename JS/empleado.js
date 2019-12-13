@@ -14,7 +14,7 @@ function mostrarDatosEmp(consulta,consulta2){
       $('#tblEmpleados').html(r);
 
     }
-
+    
   });
 }
 

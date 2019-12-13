@@ -86,28 +86,26 @@
 						<div class="row">
 							<div class="col">
 								<div class="col-sm-10 mx-auto">
+									<label><strong>Identificador Usuario:</strong></label>
+									<input type="text" id="ID_Cre_usu_editar" name="ID_Cre_usu_editar" readonly class="form-control form-control-sm" placeholder="Identificador">
+								</div>
+								<div class="col-sm-10 mx-auto">
 									<label><strong>Nombre:</strong></label>
-									<input type="text" class="form-control form-control-sm" placeholder="Nombre">
+									<input type="text" id="nom_Cre_usu_editar" name="nom_Cre_usu_editar" readonly class="form-control form-control-sm" placeholder="Nombre">
 								</div>
 								<div class="col-sm-10 mx-auto">
 									<label><strong>Departamento:</strong></label>
-									<select class="form-control form-control-sm" >
-										<option selected>-Seleccione-</option>
-										<option>Dirección</option>
-										<option>Contabilidad y Adm</option>
-										<option>Creditos y Cobros</option>
-										<option>Tecnología</option>
-										<option>Capacitación</option>
-									</select>
+									<input type="text" id="dep_Cre_usu_editar" name="dep_Cre_usu_editar" readonly class="form-control form-control-sm" placeholder="Departamento">
+									
 								</div>
 								<div class="col-sm-10 mx-auto">
 									<label><strong>Nombre Usuario:</strong></label>
-									<input type="text" disabled class="form-control form-control-sm" placeholder="Nombre Usuario">
+									<input type="text" id="usrName_Cre_usu_editar" name="usrName_Cre_usu_editar" readonly class="form-control form-control-sm" placeholder="Nombre Usuario">
 								</div>
 								<div class="col-sm-10 mx-auto">
 									<label><strong>Tipo Usuario:</strong></label>
-									<select class="form-control form-control-sm" >
-										<option selected>-Seleccione-</option>
+									<select class="form-control form-control-sm" id="tipoUsu_Cre_usu_editar" name="tipoUsu_Cre_usu_editar" >
+										<option value="" selected>-Seleccione-</option>
 										<option>Administrador</option>
 										<option>Regular</option>
 									</select>
@@ -115,35 +113,35 @@
 								
 								<div class="col-sm-10 mx-auto">
 									<label><strong>Fecha Creación:</strong></label>
-									<input type="date" disabled class="form-control form-control-sm" placeholder="Fecha Creación">
+									<input type="date" id="fecha_Cre_usu_editar" name="fecha_Cre_usu_editar" readonly class="form-control form-control-sm" placeholder="Fecha Creación">
 								</div>
 							</div>
 
 							<div class="col">
 								<div class="col-sm-10 mx-auto">
 									<label><strong>Hora Creación:</strong></label>
-									<input type="text" disabled class="form-control form-control-sm" placeholder="Hora">
+									<input type="text" id="hora_Cre_usu_editar" name="hora_Cre_usu_editar" readonly class="form-control form-control-sm" placeholder="Hora">
 								</div>
 								<div class="col-sm-10 mx-auto">
 									<label><strong>Fecha Modificación:</strong></label>
-									<input type="text" disabled class="form-control form-control-sm" placeholder="Fecha Modificación">
+									<input type="text" id="fechaMod_Cre_usu_editar" name="fechaMod_Cre_usu_editar" readonly class="form-control form-control-sm" placeholder="Fecha Modificación">
 								</div>
 								<div class="col-sm-10 mx-auto">
 									<label><strong>Usuario creador:</strong></label>
-									<input type="text" disabled class="form-control form-control-sm" placeholder="Usuario creador">
+									<input type="text" id="usu_Cre_usu_editar" name="usu_Cre_usu_editar" readonly class="form-control form-control-sm" placeholder="Usuario creador">
 								</div>
 								<div class="col-sm-10 mx-auto">
 									<label><strong>Usuario Modificador:</strong></label>
-									<input type="text" disabled class="form-control form-control-sm" placeholder="Usuario Modificador">
+									<input type="text" id="usuMod_Cre_usu_editar" name="usuMod_Cre_usu_editar" readonly class="form-control form-control-sm" placeholder="Usuario Modificador">
 								</div>
 								<div class="col-sm-10 mx-auto">
 									<label><strong>Hora Modificación:</strong></label>
-									<input type="text" disabled class="form-control form-control-sm" placeholder="Hora Modificación">
+									<input type="text" id="horaMod_Cre_usu_editar" name="horaMod_Cre_usu_editar" readonly class="form-control form-control-sm" placeholder="Hora Modificación">
 								</div>
 								<div class="col-sm-10 mx-auto">
 									<label><strong>Estado:</strong></label>
-									<select class="form-control form-control-sm" >
-										<option selected>-Seleccione-</option>
+									<select class="form-control form-control-sm" id="estado_Cre_usu_editar" name="estado_Cre_usu_editar" >
+										<option value="" selected>-Seleccione-</option>
 										<option>Activo</option>
 										<option>Inactivo</option>
 									</select>
@@ -158,7 +156,7 @@
 				<div class="modal-footer ">
 					<div class="mx-auto">
 						<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fas fa-window-close"></i> <strong>Cerrar</strong></button>
-						<button type="button" class="btn btn-warning btn-sm"><i class="far fa-save"></i> <strong>Guardar</strong></button>
+						<button type="button" id="btnEditarCrearUsuario" class="btn btn-warning btn-sm"><i class="far fa-save"></i> <strong>Guardar</strong></button>
 					</div>
 				</div>
 			</div>

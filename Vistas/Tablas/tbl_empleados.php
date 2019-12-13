@@ -6,15 +6,16 @@ $con = conexion();
 $salida ="";
 
 $query = "SELECT nom_img,
-                 nombre,
-                 apellido,
-                 nom_dep,
-                 email,
-                 cargo,
-                 telefono,
-                 usu_cre,
-                 estado_emp,
-                 id_emp FROM tbl_empleados ORDER BY id_emp ASC LIMIT 4";
+nombre,
+apellido,
+nom_dep,
+email,
+cargo,
+telefono,
+usu_cre,
+estado_emp,
+id_emp FROM tbl_empleados where activo = 'Si'
+ORDER BY id_emp ASC LIMIT 4";
 
 mysqli_set_charset($con,"utf8");
 
@@ -24,26 +25,29 @@ if (isset($_POST['consulta'])) {
     $q2= $con->real_escape_string($_POST['consulta2']);
 
     $query = "SELECT nom_img,
-                     nombre,
-                     apellido,
-                     nom_dep,
-                     email,
-                     cargo,
-                     telefono,
-                     usu_cre,
-                     estado_emp,
-                     id_emp 
-                     FROM tbl_empleados 
-                     where 
-                     (nombre LIKE '%".$q."%' OR apellido LIKE '%".$q."%' )
-                     AND 
-                     nom_dep LIKE '%".$q2."%'  
-                     ORDER BY id_emp ASC LIMIT 4";
+    nombre,
+    apellido,
+    nom_dep,
+    email,
+    cargo,
+    telefono,
+    usu_cre,
+    estado_emp,
+    id_emp 
+    FROM tbl_empleados 
+    where 
+    (nombre LIKE '%".$q."%' OR apellido LIKE '%".$q."%' )
+    AND nom_dep LIKE '%".$q2."%' AND activo LIKE '%Si%' 
+    ORDER BY id_emp ASC LIMIT 4";
     
 }
 $resultado = $con->query($query);
+$filasEncontradas = $resultado->num_rows;
 
 if ($resultado->num_rows > 0) {
+
+    echo "<h4 style='text-align: center; margin-left: 5px;'><span class='badge badge-light'><strong>Total:</strong>"." ".$filasEncontradas."</span></h4>";
+
     $salida.="<table class='table table-sm table-hover'>
     <thead>
     <th>FOTO</th>
@@ -80,11 +84,9 @@ if ($resultado->num_rows > 0) {
     $salida.='</tbody></table>';
 
 }else{
-    $salida.='<h5><strong>[ No Hay Resultados ]</strong></h5>'; 
+    $salida.='<h5 style="text-align: center;"><strong><span class="badge badge-secondary">[ No Hay Resultados ]</span></strong></h5>'; 
 }
 
 echo $salida;
 $con->close();
 ?>
-
-

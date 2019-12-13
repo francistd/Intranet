@@ -15,19 +15,13 @@
 				<div class="col-md-12 mx-auto" style="margin-bottom: 4px">
 					<div class="text-center">
 						<strong><i class="fas fa-search"></i></strong>
-						<label class="text-center">Búsqueda<input type="text" id="buscarVT" name="buscarVT" class="form-control form-control-sm"></label>
+						<label class="text-center">Búsqueda<input type="text" id="buscarCreaUsu" name="buscarCreaUsu" class="form-control form-control-sm"></label>
 
 						<strong><i class="fas fa-filter"></i></strong>
-						<label>Departamento<select id="estado" name="estado" class=" form-control form-control-sm ">
-							<option value="">-Seleccione-</option>
-							<option>Dirección</option>
-							<option>Contabilidad y Administración</option>
-							<option>Creditos y Cobros</option>
-							<option>Tecnología</option>
-							<option>Capacitación</option>
+						<label>Departamento<select id="SelectDepCreUsu" name="SelectDepCreUsu" class=" form-control form-control-sm ">
 						</select></label>
 
-						<label><button class="buscar_emp btn btn-secondary btn-sm "><i class="fas fa-search"></i> Buscar</button></label>
+						<label><button class="buscar_emp btn btn-secondary btn-sm" id="btnUsuCreaFiltro"><i class="fas fa-search"></i> Buscar</button></label>
 					</div>
 				</div>
 				<!-- Prueba -->
@@ -39,90 +33,9 @@
 				</div>
 				<!-- Prueba -->
 				<div class="rounded alert-light">
-					<table class="table table-sm table-hover">
-						<thead>
-							<tr>
-								<th scope="col">Nombre</th>
-								<th scope="col">Apellido</th>
-								<th scope="col">Usuario</th>
-								<th scope="col">Departamento</th>
-								<th scope="col">Tipo Usuario</th>
-								<th scope="col">Creador</th>
-								<th scope="col">Estado</th>
-								<th scope="col">Acción</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><span class="badge badge-secondary"> Juan Francisco</span>
-								</td>
-								<td><span class="badge badge-secondary"> Tavarez Diaz</span>
-								</td>
-								<td><span class="badge badge-secondary"> tavarezju</span>
-								</td>
-								<td><span class="badge badge-secondary"> Tecnologia</span>
-								</td>
-								<td><span class="badge badge-secondary"> Administrador</span>
-								</td>
-								<td><span class="badge badge-secondary"> tavarezju</span>
-								</td>
-								<td><span class="badge badge-secondary"> Activo</span>
-								</td>
-
-								<td>
-									<button class="Edita btn btn-primary btn-sm" data-toggle="modal" data-target="#EditarUsuario" style="margin-bottom: 4px"><i class="fas fa-external-link-alt"></i></button>
-									<button class="Borra btn btn-danger btn-sm" style="margin-bottom: 4px"><i class="far fa-trash-alt"></i></button>
-								</td>
-
-							</tr>
-							<tr>
-
-								<td><span class="badge badge-secondary"> Jose Enmanuel</span>
-								</td>
-								<td><span class="badge badge-secondary"> Mancebo Cruz</span>
-								</td>
-								<td><span class="badge badge-secondary"> manceboj</span>
-								</td>
-								<td><span class="badge badge-secondary"> Tecnologia</span>
-								</td>
-								<td><span class="badge badge-secondary"> Administrador</span>
-								</td>
-								<td><span class="badge badge-secondary"> tavarezju</span>
-								</td>
-								<td><span class="badge badge-secondary"> Activo</span>
-								</td>
-								
-
-								<td>
-									<button class="Edita btn btn-primary btn-sm" style="margin-bottom: 4px"><i class="fas fa-external-link-alt"></i></button>
-									<button class="Borra btn btn-danger btn-sm" style="margin-bottom: 4px"><i class="far fa-trash-alt"></i></button>
-								</td>
-							</tr>
-							<tr>
-
-								<td><span class="badge badge-secondary"> Juan Francisco</span>
-								</td>
-								<td><span class="badge badge-secondary"> Tavarez Diaz</span>
-								</td>
-								<td><span class="badge badge-secondary"> tavarezju</span>
-								</td>
-								<td><span class="badge badge-secondary"> Tecnologia</span>
-								</td>
-								<td><span class="badge badge-secondary"> Administrador</span>
-								</td>
-								<td><span class="badge badge-secondary"> tavarezju</span>
-								</td>
-								<td><span class="badge badge-secondary"> Activo</span>
-								</td>
-
-								<td>
-									<button class="Edita btn btn-primary btn-sm" style="margin-bottom: 4px"><i class="fas fa-external-link-alt"></i></button>
-									<button class="Borra btn btn-danger btn-sm" style="margin-bottom: 4px"><i class="far fa-trash-alt"></i></button>
-								</td>
-
-							</tr>
-						</tbody>
-					</table>
+					<div id="tblUsuarios" class="rounded alert-light">
+					
+				</div>
 				</div>
 				<!-- Prueba -->
 			</div>
